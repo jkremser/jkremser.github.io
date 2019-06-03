@@ -3,109 +3,108 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jkremser.github.io/presentation/project1/</loc>
+    <loc>https://jkremser.github.io/project/spark-operator/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/project/project1/</loc>
+    <loc>https://jkremser.github.io/presentation/spark-operator-1/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/presentation/project2/</loc>
+    <loc>https://jkremser.github.io/project/abstract-operator/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/project/project2/</loc>
+    <loc>https://jkremser.github.io/presentation/spark-operator-2/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/presentation/project3/</loc>
+    <loc>https://jkremser.github.io/presentation/sais18/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/project/project3/</loc>
+    <loc>https://jkremser.github.io/project/slusno-cech/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/presentation/project4/</loc>
+    <loc>https://jkremser.github.io/presentation/fosdem18/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/project/project4/</loc>
+    <loc>https://jkremser.github.io/project/soit/</loc>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/post/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>https://jkremser.github.io/presentation/open-slava-17/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/project/ansible-spark-operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/presentation/open-slava-18/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/project/archetypes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/presentation/devconf18/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/project/dotfiles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/presentation/devconf16/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/presentation/devconf14/</loc>
   </url>
   
   <url>
     <loc>https://jkremser.github.io/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/post/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/go/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/golang/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/hugo/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/themes/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/post/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/post/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/template/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jkremser.github.io/post/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/post/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/go/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/golang/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/hugo/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -121,7 +120,42 @@
   </url>
   
   <url>
+    <loc>https://jkremser.github.io/tags/cncf/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jkremser.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/dsl/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/devconf/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/fosdem/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/ml-sig/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/maven/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/openslava/</loc>
     <priority>0</priority>
   </url>
   
@@ -136,37 +170,97 @@
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/bootstrap/</loc>
+    <loc>https://jkremser.github.io/tags/rx/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/css/</loc>
+    <loc>https://jkremser.github.io/tags/sais/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/highlight-js/</loc>
+    <loc>https://jkremser.github.io/tags/ansible/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/html/</loc>
+    <loc>https://jkremser.github.io/tags/archetype/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/js/</loc>
+    <loc>https://jkremser.github.io/tags/bash/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/responsive/</loc>
+    <loc>https://jkremser.github.io/tags/bitcoin/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/syntax-highlighting/</loc>
+    <loc>https://jkremser.github.io/tags/containers/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/dotfiles/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/kubernetes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/kubernetes-operator/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/notebook/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/openshift/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/patterns/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/programming/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/python/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/scala/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/spark/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/trolling/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/website/</loc>
     <priority>0</priority>
   </url>
   

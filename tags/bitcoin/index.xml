@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bitcoin on Jirka Kremser</title>
+    <link>https://jkremser.github.io/tags/bitcoin/</link>
+    <description>Recent content in bitcoin on Jirka Kremser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jkremser.github.io/tags/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Analyzing Blockchain Transactions in Apache Spark @ Spark Summit 18</title>
+      <link>https://jkremser.github.io/presentation/sais18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/sais18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
+      <link>https://jkremser.github.io/presentation/fosdem18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/fosdem18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blockchain Analysis @ DevConf 18</title>
+      <link>https://jkremser.github.io/presentation/devconf18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf18/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

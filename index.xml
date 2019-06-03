@@ -6,115 +6,153 @@
     <description>Recent content on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jkremser.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Project 1</title>
-      <link>https://jkremser.github.io/presentation/project1/</link>
+      <title>Spark Operator</title>
+      <link>https://jkremser.github.io/project/spark-operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/project1/</guid>
+      <guid>https://jkremser.github.io/project/spark-operator/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 1</title>
-      <link>https://jkremser.github.io/project/project1/</link>
+      <title>Spark Operator @ OpenShift ML Sig</title>
+      <link>https://jkremser.github.io/presentation/spark-operator-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project1/</guid>
+      <guid>https://jkremser.github.io/presentation/spark-operator-1/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 2</title>
-      <link>https://jkremser.github.io/presentation/project2/</link>
+      <title>Abstract Operator</title>
+      <link>https://jkremser.github.io/project/abstract-operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/project2/</guid>
+      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 2</title>
-      <link>https://jkremser.github.io/project/project2/</link>
+      <title>Spark Operator @ CNCF Big Data Sig</title>
+      <link>https://jkremser.github.io/presentation/spark-operator-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project2/</guid>
+      <guid>https://jkremser.github.io/presentation/spark-operator-2/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 3</title>
-      <link>https://jkremser.github.io/presentation/project3/</link>
+      <title>Analyzing Blockchain Transactions in Apache Spark @ Spark Summit 18</title>
+      <link>https://jkremser.github.io/presentation/sais18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/project3/</guid>
+      <guid>https://jkremser.github.io/presentation/sais18/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 3</title>
-      <link>https://jkremser.github.io/project/project3/</link>
+      <title>Náhodný slušný Čech</title>
+      <link>https://jkremser.github.io/project/slusno-cech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project3/</guid>
+      <guid>https://jkremser.github.io/project/slusno-cech/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 4</title>
-      <link>https://jkremser.github.io/presentation/project4/</link>
+      <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
+      <link>https://jkremser.github.io/presentation/fosdem18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/project4/</guid>
+      <guid>https://jkremser.github.io/presentation/fosdem18/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 4</title>
-      <link>https://jkremser.github.io/project/project4/</link>
+      <title>Soit</title>
+      <link>https://jkremser.github.io/project/soit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project4/</guid>
+      <guid>https://jkremser.github.io/project/soit/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>https://jkremser.github.io/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Spark on OpenSlava 2017</title>
+      <link>https://jkremser.github.io/presentation/open-slava-17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <guid>https://jkremser.github.io/presentation/open-slava-17/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://jkremser.github.io/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>ansible-openshift-spark-operator</title>
+      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/post/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
+      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://jkremser.github.io/post/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Apache Spark on Kubernetes 2018</title>
+      <link>https://jkremser.github.io/presentation/open-slava-18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/post/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>https://jkremser.github.io/presentation/open-slava-18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven Archetypes for basic operators</title>
+      <link>https://jkremser.github.io/project/archetypes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/archetypes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blockchain Analysis @ DevConf 18</title>
+      <link>https://jkremser.github.io/presentation/devconf18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>https://jkremser.github.io/project/dotfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reactive Programming @ DevConf 16</title>
+      <link>https://jkremser.github.io/presentation/devconf16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing an internal DSL language in Scala</title>
+      <link>https://jkremser.github.io/presentation/devconf14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf14/</guid>
+      <description></description>
     </item>
     
     <item>

@@ -11,38 +11,65 @@
     
     
     <item>
-      <title>Project 1</title>
-      <link>https://jkremser.github.io/project/project1/</link>
+      <title>Spark Operator</title>
+      <link>https://jkremser.github.io/project/spark-operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project1/</guid>
+      <guid>https://jkremser.github.io/project/spark-operator/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 2</title>
-      <link>https://jkremser.github.io/project/project2/</link>
+      <title>Abstract Operator</title>
+      <link>https://jkremser.github.io/project/abstract-operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project2/</guid>
+      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 3</title>
-      <link>https://jkremser.github.io/project/project3/</link>
+      <title>Náhodný slušný Čech</title>
+      <link>https://jkremser.github.io/project/slusno-cech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project3/</guid>
+      <guid>https://jkremser.github.io/project/slusno-cech/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Project 4</title>
-      <link>https://jkremser.github.io/project/project4/</link>
+      <title>Soit</title>
+      <link>https://jkremser.github.io/project/soit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/project4/</guid>
+      <guid>https://jkremser.github.io/project/soit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-openshift-spark-operator</title>
+      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven Archetypes for basic operators</title>
+      <link>https://jkremser.github.io/project/archetypes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/archetypes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>https://jkremser.github.io/project/dotfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/dotfiles/</guid>
       <description></description>
     </item>
     
