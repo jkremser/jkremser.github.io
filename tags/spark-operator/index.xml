@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spark-operator on Jirka Kremser</title>
+    <link>https://jkremser.github.io/tags/spark-operator/</link>
+    <description>Recent content in spark-operator on Jirka Kremser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jkremser.github.io/tags/spark-operator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Migrating the Spark Operator to Quarkus</title>
+      <link>https://jkremser.github.io/post/spark-operator-quarkus/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/post/spark-operator-quarkus/</guid>
+      <description>Spark Operator ❤ Quarkus This attempts to describe the migration path of Spark Operator from the conventional (hotspot) JVM to quarkus.io / GraalVM.
+  Why Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are.</description>
+    </item>
+    
+  </channel>
+</rss>

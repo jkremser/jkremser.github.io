@@ -6,18 +6,10 @@
     <description>Recent content in spark on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jkremser.github.io/tags/spark/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Spark Operator</title>
-      <link>https://jkremser.github.io/project/spark-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/spark-operator/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Spark Operator @ OpenShift ML Sig</title>
@@ -65,15 +57,6 @@
     </item>
     
     <item>
-      <title>ansible-openshift-spark-operator</title>
-      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Apache Spark on Kubernetes 2018</title>
       <link>https://jkremser.github.io/presentation/open-slava-18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -89,6 +72,43 @@
       
       <guid>https://jkremser.github.io/presentation/devconf18/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Spark Operator</title>
+      <link>https://jkremser.github.io/project/spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitcoin Insights</title>
+      <link>https://jkremser.github.io/project/bitcoin-insights/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/bitcoin-insights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-openshift-spark-operator</title>
+      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Migrating the Spark Operator to Quarkus</title>
+      <link>https://jkremser.github.io/post/spark-operator-quarkus/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/post/spark-operator-quarkus/</guid>
+      <description>Spark Operator ❤ Quarkus This attempts to describe the migration path of Spark Operator from the conventional (hotspot) JVM to quarkus.io / GraalVM.
+  Why Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are.</description>
     </item>
     
   </channel>

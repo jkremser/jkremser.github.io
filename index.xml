@@ -6,19 +6,10 @@
     <description>Recent content on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jkremser.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Spark Operator</title>
-      <link>https://jkremser.github.io/project/spark-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/spark-operator/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Spark Operator @ OpenShift ML Sig</title>
@@ -26,15 +17,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/spark-operator-1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Abstract Operator</title>
-      <link>https://jkremser.github.io/project/abstract-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     
@@ -57,29 +39,11 @@
     </item>
     
     <item>
-      <title>Náhodný slušný Čech</title>
-      <link>https://jkremser.github.io/project/slusno-cech/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/slusno-cech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
       <link>https://jkremser.github.io/presentation/fosdem18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/fosdem18/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Soit</title>
-      <link>https://jkremser.github.io/project/soit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/soit/</guid>
       <description></description>
     </item>
     
@@ -93,15 +57,6 @@
     </item>
     
     <item>
-      <title>ansible-openshift-spark-operator</title>
-      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Apache Spark on Kubernetes 2018</title>
       <link>https://jkremser.github.io/presentation/open-slava-18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -111,29 +66,11 @@
     </item>
     
     <item>
-      <title>Maven Archetypes for basic operators</title>
-      <link>https://jkremser.github.io/project/archetypes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/archetypes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Blockchain Analysis @ DevConf 18</title>
       <link>https://jkremser.github.io/presentation/devconf18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/devconf18/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dotfiles</title>
-      <link>https://jkremser.github.io/project/dotfiles/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/dotfiles/</guid>
       <description></description>
     </item>
     
@@ -156,14 +93,148 @@
     </item>
     
     <item>
-      <title>Migrate from Jekyll</title>
-      <link>https://jkremser.github.io/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <title>Spark Operator</title>
+      <link>https://jkremser.github.io/project/spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>https://jkremser.github.io/project/spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Abstract Operator</title>
+      <link>https://jkremser.github.io/project/abstract-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Náhodný slušný Čech</title>
+      <link>https://jkremser.github.io/project/slusno-cech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/slusno-cech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bitcoin Insights</title>
+      <link>https://jkremser.github.io/project/bitcoin-insights/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/bitcoin-insights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NeuroCars</title>
+      <link>https://jkremser.github.io/project/neurocars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/neurocars/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven Archetypes for basic operators</title>
+      <link>https://jkremser.github.io/project/archetypes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/archetypes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>https://jkremser.github.io/project/dotfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-openshift-spark-operator</title>
+      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MEditor</title>
+      <link>https://jkremser.github.io/project/meta-editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/meta-editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simple Websocket VCR</title>
+      <link>https://jkremser.github.io/project/simple-websocket-vcr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/simple-websocket-vcr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Chat Electron</title>
+      <link>https://jkremser.github.io/project/g-chat-electron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/g-chat-electron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dosh</title>
+      <link>https://jkremser.github.io/project/dosh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/dosh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Soit</title>
+      <link>https://jkremser.github.io/project/soit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/soit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fast Neural Style - dockerized</title>
+      <link>https://jkremser.github.io/project/fast-neural-style-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/fast-neural-style-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker W-Shot</title>
+      <link>https://jkremser.github.io/project/docker-w-shot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/docker-w-shot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Migrating the Spark Operator to Quarkus</title>
+      <link>https://jkremser.github.io/post/spark-operator-quarkus/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/post/spark-operator-quarkus/</guid>
+      <description>Spark Operator ❤ Quarkus This attempts to describe the migration path of Spark Operator from the conventional (hotspot) JVM to quarkus.io / GraalVM.
+  Why Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are.</description>
     </item>
     
   </channel>

@@ -38,20 +38,20 @@
     </item>
     
     <item>
-      <title>Soit</title>
-      <link>https://jkremser.github.io/project/soit/</link>
+      <title>Bitcoin Insights</title>
+      <link>https://jkremser.github.io/project/bitcoin-insights/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/soit/</guid>
+      <guid>https://jkremser.github.io/project/bitcoin-insights/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>ansible-openshift-spark-operator</title>
-      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
+      <title>NeuroCars</title>
+      <link>https://jkremser.github.io/project/neurocars/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
+      <guid>https://jkremser.github.io/project/neurocars/</guid>
       <description></description>
     </item>
     
@@ -70,6 +70,78 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/project/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible-openshift-spark-operator</title>
+      <link>https://jkremser.github.io/project/ansible-spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/ansible-spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MEditor</title>
+      <link>https://jkremser.github.io/project/meta-editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/meta-editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simple Websocket VCR</title>
+      <link>https://jkremser.github.io/project/simple-websocket-vcr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/simple-websocket-vcr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Chat Electron</title>
+      <link>https://jkremser.github.io/project/g-chat-electron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/g-chat-electron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dosh</title>
+      <link>https://jkremser.github.io/project/dosh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/dosh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Soit</title>
+      <link>https://jkremser.github.io/project/soit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/soit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fast Neural Style - dockerized</title>
+      <link>https://jkremser.github.io/project/fast-neural-style-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/fast-neural-style-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker W-Shot</title>
+      <link>https://jkremser.github.io/project/docker-w-shot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/docker-w-shot/</guid>
       <description></description>
     </item>
     

@@ -11,29 +11,11 @@
     
     
     <item>
-      <title>Spark Operator</title>
-      <link>https://jkremser.github.io/project/spark-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/spark-operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Spark Operator @ OpenShift ML Sig</title>
       <link>https://jkremser.github.io/presentation/spark-operator-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/spark-operator-1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Abstract Operator</title>
-      <link>https://jkremser.github.io/project/abstract-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     
@@ -79,6 +61,24 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/devconf18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spark Operator</title>
+      <link>https://jkremser.github.io/project/spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Abstract Operator</title>
+      <link>https://jkremser.github.io/project/abstract-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Migrating the Spark Operator to Quarkus</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #dfe2e5;
+    }
+
+    :root {
+        --accent: #1a574a;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jkremser.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.0/css/fork-awesome.min.css" integrity="sha256-sX8HLspqYoXVPetzJRE4wPhIhDBu2NB0kYpufzkQSms=" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.55.6" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141311316-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-141311316-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Migrating the Spark Operator to Quarkus</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                                <li><a href="/presentation/">Presentations</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/jkremser/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JirkaKremser/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jirik/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://stackoverflow.com/users/1594980/jiri-kremser"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="mailto:jkremser@redhat.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/spark-operator-quarkus/">Migrating the Spark Operator to Quarkus</a></h4>
+    <h5>July 13, 2019</h5>
+    
+    <a href="https://jkremser.github.io/tags/spark"><kbd class="item-tag">spark</kbd></a>
+    
+    <a href="https://jkremser.github.io/tags/spark-operator"><kbd class="item-tag">spark-operator</kbd></a>
+    
+    <a href="https://jkremser.github.io/tags/quarkus"><kbd class="item-tag">quarkus</kbd></a>
+    
+    <a href="https://jkremser.github.io/tags/graalvm"><kbd class="item-tag">graalvm</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="spark-operator-quarkus">Spark Operator ❤ Quarkus</h1>
+
+<p>This attempts to describe the migration path of Spark Operator from the conventional (hotspot) JVM to <a href="https://quarkus.io/">quarkus.io</a> / <a href="https://www.graalvm.org/">GraalVM</a>.</p>
+
+<p><figure class="logo2">
+    <img src="/spark-operator-quarkus/graalvm-logo.png"/> 
+</figure>
+
+<figure class="logo1">
+    <img src="/spark-operator-quarkus/quarkus-logo.png"/> 
+</figure>
+</p>
+
+<h2 id="why">Why</h2>
+
+<p>Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are. Only then it triggers the <code>JIT</code> compiler that produces the platform specific assembly code. Also when starting the JVM there is a huge overhead, because it needs to load all the possible classes and metadata about them, during the class loading the static initializers have to be run, etc.</p>
+
+<p>On the other hand the micro services are often containerized and run in platforms such as Kubernetes and in this environment there is a demand for them to start and respond to requests as quickly as possible. The abovementioned peek performance isn&rsquo;t really the issue here, because the containers are being stopped and started much more often. In other words, there is frequently not enough time for the <code>JIT</code> compiler to kick in. Good example is a serverless platform where the worker containers are supposed to have a very fast start.</p>
+
+<p>GraalVM provides, among other polyglot features, also the ahead of time compilation capabilities and something called native image. With native image you can provide your jar files as the input for the GraalVM compiler and on the output you will end up with just one binary that contains everything including the JVM. It has a modified version of JVM called Substrate VM and it also contains a memory snapshot that was calculated during the compilation. The compilation process actually runs all the static initializers to save some time during the actual start of the application. This benefit comes with little price, reflection calls are not as easy as in normal JVM environment, and also the static initializer should not contain any complex logic that should be done actually during the run time, because the run time and compile time may happen in significantly different moments.</p>
+
+<p>As for the reflective calls, one has to tell GraalVM compiler in advance what classes and methods will be used for reflection and whitelist them using a JSON file that is then passed to the native image tool. Here, I see the big advantage of a quarkus.io that helps with the native image build. It can automatically figures out what classes should be marked that require the reflection or you can use the annotation to explicitly mention them if quarkus misses them.</p>
+
+
+<div class="notices note" ><p>UPDATE: The automatic detection of reflective calls is actually added to GraalVM&rsquo;s native image itself (<a href="https://github.com/oracle/graal/blob/master/substratevm/REFLECTION.md#automatic-detection">docs</a>). However, it doesn&rsquo;t work in all possible situations.</p>
+</div>
+
+<p>Another nice feature of quarkus is that it provides some <code>Java EE</code> specs that wouldn&rsquo;t work otherwise with the native image, for instance the <code>CDI</code> implementation or <code>JAX-RS</code> for rest services. Last but not least, it provides a set of maven plugins and tools for rapid development of web apps.</p>
+
+<p><a href="https://github.com/radanalyticsio/spark-operator">Spark Operator</a> is a cloud native application that needs to start fast and have the small memory and container image footprint, so it was quite a natural choice to use the GraalVM&rsquo;s native image and quarkus.io. Here I will describe the migration of the <a href="https://github.com/jvm-operators/abstract-operator">Abstract Operator SDK</a> from the plain Java to a version that was digestible for quarkus and native images.</p>
+
+<h2 id="challenges">Challenges</h2>
+
+<p>I had the github issue that addressed the native image opened for a very long time, but it was very cumbersome to actually make it working. I hit namely this obstacles:</p>
+
+<ol>
+<li><p><strong>Build</strong> &ndash; Running the native build wasn&rsquo;t easy and there is myriad of parameters that can be fine tunned, check the &ldquo;one-liner&rdquo; command I was originally using (<a href="#cmd">cmd</a>). Ugly, right?</p></li>
+
+<li><p><strong>Reflection</strong> &ndash; Once the compilation finally succeeded, Jackson and other and reflective calls during the (de)serilalization were not working and the operator was failing in run time on <code>ClasssNotFoundException</code>s. The abstract-operator library itself uses reflection for finding the implementations of the <code>AbstractOperator</code> class during run time and the issue here is that the library itself can&rsquo;t know in advance its client so each possible client would need to create the JSON file with the allowed classes. Working with fabric8 Kubernetes client also wasn&rsquo;t seamless at the beginning</p></li>
+
+<li><p><strong>Static Initializers</strong> &ndash; Necessity to change the code a bit, for instance the static initializers shouldn&rsquo;t do anything complex or even start a thread due to the AOT compilation and heap snapshoting.</p></li>
+
+<li><p><strong>CI</strong> &ndash; Download, unzip and add to path and run the native build with <code>graalvm</code> isn&rsquo;t hard, but it complicates the continuous integration process. Spark Operator uses Travis CI and it provides a limited machines for the free plan so doing all of this may complicate things further.</p></li>
+</ol>
+
+<p id="cmd">Ugly command for building:</p>
+
+<pre><code class="language-bash">d kill `d ps -q` || true &amp;&amp; mvn clean install &amp;&amp; cp /home/jkremser/install/graalvm-ce-19.0.2/jre/lib/amd64/libsunec.so ./target/ &amp;&amp; ~/install/graalvm-ce-19.0.2/bin/native-image --no-server -H:Name=micro -J-Xmx4G -J-Xms4G -H:+JNI -H:EnableURLProtocols=https --allow-incomplete-classpath -H:ReflectionConfigurationFiles=classes.json -H:ResourceConfigurationFiles=resources.json -H:+ReportExceptionStackTraces -H:+ReportUnsupportedElementsAtRuntime --static -H:Name=app -jar ./target/spark-operator-*.jar &amp;&amp; mv ./spark-operator-*-SNAPSHOT target/ &amp;&amp; docker build -f Dockerfile.centos . -t foo &amp;&amp; oc cluster up &amp;&amp; oc login -u system:admin ; oc project default &amp;&amp; sleep 2 &amp;&amp; oc apply -f manifest/operator.yaml &amp;&amp; sleep 8 &amp;&amp; opLogs
+</code></pre>
+
+<h2 id="solutions-workarounds">Solutions/Workarounds</h2>
+
+<p>What quarkus.io promises is this simple diagram, so let&rsquo;s look whether it was that easy.
+<figure class="darkImg">
+    <img src="/spark-operator-quarkus/quarkus-ni.png"/> <figcaption>
+            <h4>Quarkus diagram</h4>
+        </figcaption>
+</figure>
+</p>
+
+<h4 id="building-the-native-image">Building the Native Image</h4>
+
+<p>Quarkus addresses the native build itself with a maven plugin that runs the command. For the spark operator and the abstract operator library we use the maven profile that calls this plugin. The profile is defined <a href="https://github.com/jvm-operators/operator-parent-pom/blob/285a20e95c755cc7cae22dd41cc5447212f5eefb/pom.xml#L418:L439">here</a>.</p>
+
+<p>So all it now takes is to call the:</p>
+
+<pre><code>mvn package -DskipTests -Pnative
+</code></pre>
+
+<h4 id="reflection">Reflection</h4>
+
+<p>The majority of the reflective calls worked out of the box, futhermore, <code>quarkus.io</code> allows to use a sub set of CDI. So I could have replaced the library that was using the reflection for finding the classes that extended a class or had a annotation on them with <code>CDI</code>&rsquo;s <code>@Instance</code>, check the code example:</p>
+
+<p>class <a href="https://github.com/jvm-operators/abstract-operator/blob/ddb89ad2b0eda8ec29121fc37a4de24a000588de/src/main/java/io/radanalytics/operator/SDKEntrypoint.java">SDKEntrypoint.java</a>:</p>
+
+<pre><code class="language-java">@Inject @Any
+private Instance&lt;AbstractOperator&lt;? extends EntityInfo&gt;&gt; operators;
+...
+
+// later in the code
+List&lt;AbstractOperator&lt;? extends EntityInfo&gt;&gt; operatorList = operators.stream().collect(Collectors.toList());
+
+if (operatorList.isEmpty()) {
+    log.warn(&quot;No suitable operators were found, make sure your class extends AbstractOperator and have @Singleton on it.&quot;);
+}
+</code></pre>
+
+<p>So one little drawback here is that the concrete implementation of the operator now has to be an injectable entity, so <code>@Singleton</code> is a good candidate for that class. This unfortunately breaks the backward compatibility with the previous implementation.</p>
+
+<p>The <a href="https://github.com/jvm-operators/abstract-operator">Abstract Operator Java SDK</a> uses the JSON schema as the single source of truth for the shape of all the Custom Resources (<code>CR</code>) that operator manages and also automatically register itself as the <a href="https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#specifying-a-structural-schema">OpenAPIv3 schema</a> so that Kubernetes may check the actual schema validation. In other words, the framework itself registers the Custom Resource Definition (<code>CRD</code>) based on these JSON schemas + makes sure the schema validation will work with K8s.</p>
+
+<p>What it also does is generating Java POJOs from these JSON schemas, so that user of the SDK may extract the right information from the custom resource in the code and react correctly on it. However, these generated classes weren&rsquo;t automatically detected by quarkus.io for the reflective calls, so the operator failed in run time when deserializing the CRs. Luckily, the <code>jsonschema2pojo</code> library can change the behavir of the class generation by providing its own &ldquo;Annotator&rdquo; Using that fact, I&rsquo;ve created a annotator that puts the <code>@RegisterForReflection</code> on each generated class and quarkus can find the classes and register them without any issues.</p>
+
+<p>The annotator (<a href="https://github.com/jvm-operators/abstract-operator/blob/master/annotator/src/main/java/io/radanalytics/operator/annotator/RegisterForReflectionAnnotator.java">source</a>):</p>
+
+<pre><code class="language-java">package io.radanalytics.operator.annotator;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.sun.codemodel.JDefinedClass;
+import org.jsonschema2pojo.AbstractAnnotator;
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
+public class RegisterForReflectionAnnotator extends AbstractAnnotator {
+
+    @Override
+    public void propertyOrder(JDefinedClass clazz, JsonNode propertiesNode) {
+        super.propertyOrder(clazz, propertiesNode);
+        clazz.annotate(RegisterForReflection.class);
+    }
+}
+</code></pre>
+
+<p>The kubernetes client itself had some issues when running in the native image context,luckily they were aware of the fact that they need to run on native image and there is also an <a href="https://github.com/quarkusio/quarkus/tree/master/extensions/kubernetes-client">extension</a> for the client that makes things working out of the box.</p>
+
+<h4 id="static-initializers">Static Initializers</h4>
+
+<p>This actually wasn&rsquo;t big deal. The older version of GraalVM were quite aggressive with the optimization and were complaining also about static methods that didn&rsquo;t take any params. My theory is that it tried to calculate their output and speculate on the fact that they will be returning the same answer all the time (no side effects). Old implementation of the Java Operator SDK was using the the static main method that naturally led user to use as many of the static code (methods, fields) as possible.</p>
+
+<p>The CDI, however, allows to use:</p>
+
+<pre><code class="language-java">void onStart(@Observes StartupEvent event) // ~ main method
+
+void onStop(@Observes ShutdownEvent event) // ~ shutdown hook
+
+@PostConstruct
+void init(){                               // for preparing the ground
+</code></pre>
+
+<h4 id="continuous-integration">Continuous Integration</h4>
+
+<p>This is actually still to be done.</p>
+
+<h2 id="result">Result</h2>
+
+<p>The startup time is below one second:
+<figure>
+    <img src="/spark-operator-quarkus/operator-startup.png"/> 
+</figure>
+</p>
+
+<p>The memory footprint after startup is around 40 MB:
+<figure>
+    <img src="/spark-operator-quarkus/operator-memory.png"/> 
+</figure>
+</p>
+
+<p>When running the application for a long run, it triggers the garbage collection around ~80 MB and the average is still around ~50 megs of memory consumption on heap, not bad for Java :)
+<figure>
+    <img src="/spark-operator-quarkus/operator-memory2.png"/> 
+</figure>
+</p>
+
+<p>The resulting container image is <code>102.3 MB</code> for UBI as the base image and <code>69.4 MB</code> for images based on Alpine.</p>
+
+<p>images: <a href="https://quay.io/repository/radanalyticsio/spark-operator?tab=tags">https://quay.io/repository/radanalyticsio/spark-operator?tab=tags</a></p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>What we have sacrificed here with using the AOT compilation is the best possible peak performance, in other words the optimized assembly code directly tailored for the profile of our long running app, however the benefits clearly overweight this issue. Operators aren&rsquo;t supposed to do difficult parallel calculation, on the other hand they should start quickly, be small, reliable and have small memory footprint. And that we have achieved.</p>
+
+<h4 id="links">Links</h4>
+
+<ul>
+<li><i class="fa fa-github"></i> Spark Operator &ndash; <a href="https://github.com/radanalyticsio/spark-operator">radanalyticsio/spark-operator</a></li>
+<li><i class="fa fa-github"></i> Abstract Operator &ndash; <a href="https://github.com/jvm-operators/abstract-operator">jvm-operators/abstract-operator</a></li>
+<li><i class="fa fa-github"></i> GraalVM &ndash; <a href="https://github.com/oracle/graal">oracle/graal</a></li>
+<li><i class="fa fa-github"></i> Quarkus &ndash; <a href="https://github.com/quarkusio/quarkus">quarkusio/quarkus</a></li>
+<li><i class="fa fa-github"></i> Kubernetes Client &ndash; <a href="https://github.com/fabric8io/kubernetes-client">fabric8io/kubernetes-client</a></li>
+<li><i class="fa fa-github"></i> kubernetes-client Quarkus Extension &ndash; <a href="https://github.com/quarkusio/quarkus/tree/master/extensions/kubernetes-client">repo</a></li>
+<li><i class="fa fa-github"></i> jsonschema2pojo &ndash; <a href="https://github.com/joelittlejohn/jsonschema2pojo">joelittlejohn/jsonschema2pojo</a></li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    this.page.identifier = 'spark-operator-quarkus';
+    this.page.title = 'Migrating the Spark Operator to Quarkus';
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jkremser" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">🄯 Copyleft: All rights not-reserved, here is the <a href='https://github.com/jkremser/web'>code</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

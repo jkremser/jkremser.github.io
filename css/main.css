@@ -16,6 +16,25 @@ main {
     max-width: 750px;
 }
 
+.darkImg {
+    background-color: #333;
+    margin: 40px;
+}
+
+.logo1 {
+    width: 65px;
+    margin-left: 450px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.logo2 {
+    width: 200px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
 /*footer*/
 
 .copyright {
@@ -71,7 +90,7 @@ a:hover {
 /*list item for posts and projects*/
 
 .item {
-    padding: 10px 0;
+    padding: 25px 0;
 }
 
 .item-tag {
@@ -97,4 +116,66 @@ footer {
 
 img {
     max-width: 100%;
+}
+
+div.notices {
+    margin: 2rem 0;
+    position: relative;
+}
+div.notices p {
+    padding: 15px;
+    display: block;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    color: #666;
+}
+div.notices p:first-child:before {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    font-family: "ForkAwesome";
+    font-weight: 900;
+    font-size: 20px;
+    content: "\f06a";
+    left: 10px;
+}
+div.notices p:first-child:after {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 2rem;
+}
+div.notices.info p {
+    border-top: 30px solid #F0B37E;
+    background: #FFF2DB;
+}
+div.notices.info p:first-child:after {
+    content: 'Info';
+}
+div.notices.warning p {
+    border-top: 30px solid rgba(217, 83, 79, 0.8);
+    background: #FAE2E2;
+}
+div.notices.warning p:first-child:after {
+    content: 'Warning';
+}
+div.notices.note p {
+    border-top: 30px solid #6AB0DE;
+    background: #E7F2FA;
+}
+div.notices.note p:first-child:after {
+    content: 'Note';
+}
+div.notices.tip p {
+    border-top: 30px solid rgba(92, 184, 92, 0.8);
+    background: #E6F9E6;
+}
+div.notices.tip p:first-child:after {
+    content: 'Tip';
+}
+
+div.notices p:first-child:after {
+    margin-left: 15px;
+    font-size: 16px;
+    top: 4px
 }
