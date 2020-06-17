@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kubernetes-operator on Jirka Kremser</title>
@@ -11,11 +11,56 @@
     
     
     <item>
+      <title>Polyglot Operators, Spark Operator @ DevConf.us 19</title>
+      <link>https://jkremser.github.io/presentation/devconf-us19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf-us19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spark Operator—Deploy, Manage and Monitor Spark Clusters on Kubernetes @ Spark Summit eu 19</title>
+      <link>https://jkremser.github.io/presentation/sais-eu19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/sais-eu19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spark Operator</title>
+      <link>https://jkremser.github.io/project/spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Spark Operator @ OpenShift ML Sig</title>
       <link>https://jkremser.github.io/presentation/spark-operator-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/spark-operator-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes 101</title>
+      <link>https://jkremser.github.io/presentation/kubernetes-101-tm19-ostrava/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/kubernetes-101-tm19-ostrava/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Abstract Operator</title>
+      <link>https://jkremser.github.io/project/abstract-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     
@@ -34,24 +79,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/open-slava-17/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spark Operator</title>
-      <link>https://jkremser.github.io/project/spark-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/spark-operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Abstract Operator</title>
-      <link>https://jkremser.github.io/project/abstract-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jirka Kremser</title>
@@ -12,11 +12,65 @@
     
     
     <item>
+      <title>Polyglot Operators, Spark Operator @ DevConf.us 19</title>
+      <link>https://jkremser.github.io/presentation/devconf-us19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf-us19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spark Operator—Deploy, Manage and Monitor Spark Clusters on Kubernetes @ Spark Summit eu 19</title>
+      <link>https://jkremser.github.io/presentation/sais-eu19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/sais-eu19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spark Operator</title>
+      <link>https://jkremser.github.io/project/spark-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/spark-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Spark Operator @ OpenShift ML Sig</title>
       <link>https://jkremser.github.io/presentation/spark-operator-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/presentation/spark-operator-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
+      <link>https://jkremser.github.io/presentation/fosdem18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/fosdem18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes 101</title>
+      <link>https://jkremser.github.io/presentation/kubernetes-101-tm19-ostrava/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/kubernetes-101-tm19-ostrava/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Abstract Operator</title>
+      <link>https://jkremser.github.io/project/abstract-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
       <description></description>
     </item>
     
@@ -39,83 +93,20 @@
     </item>
     
     <item>
-      <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
-      <link>https://jkremser.github.io/presentation/fosdem18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/presentation/fosdem18/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spark on OpenSlava 2017</title>
-      <link>https://jkremser.github.io/presentation/open-slava-17/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/presentation/open-slava-17/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Apache Spark on Kubernetes 2018</title>
-      <link>https://jkremser.github.io/presentation/open-slava-18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/presentation/open-slava-18/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blockchain Analysis @ DevConf 18</title>
-      <link>https://jkremser.github.io/presentation/devconf18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/presentation/devconf18/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reactive Programming @ DevConf 16</title>
-      <link>https://jkremser.github.io/presentation/devconf16/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/presentation/devconf16/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writing an internal DSL language in Scala</title>
-      <link>https://jkremser.github.io/presentation/devconf14/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/presentation/devconf14/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spark Operator</title>
-      <link>https://jkremser.github.io/project/spark-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/spark-operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Abstract Operator</title>
-      <link>https://jkremser.github.io/project/abstract-operator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/project/abstract-operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Náhodný slušný Čech</title>
       <link>https://jkremser.github.io/project/slusno-cech/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/project/slusno-cech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Braids - copanky.eu</title>
+      <link>https://jkremser.github.io/project/copanky/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/copanky/</guid>
       <description></description>
     </item>
     
@@ -138,11 +129,38 @@
     </item>
     
     <item>
+      <title>Spark on OpenSlava 2017</title>
+      <link>https://jkremser.github.io/presentation/open-slava-17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/open-slava-17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache Spark on Kubernetes 2018</title>
+      <link>https://jkremser.github.io/presentation/open-slava-18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/open-slava-18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Maven Archetypes for basic operators</title>
       <link>https://jkremser.github.io/project/archetypes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/project/archetypes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blockchain Analysis @ DevConf 18</title>
+      <link>https://jkremser.github.io/presentation/devconf18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf18/</guid>
       <description></description>
     </item>
     
@@ -165,11 +183,29 @@
     </item>
     
     <item>
+      <title>Reactive Programming @ DevConf 16</title>
+      <link>https://jkremser.github.io/presentation/devconf16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf16/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>MEditor</title>
       <link>https://jkremser.github.io/project/meta-editor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/project/meta-editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing an internal DSL language in Scala</title>
+      <link>https://jkremser.github.io/presentation/devconf14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/presentation/devconf14/</guid>
       <description></description>
     </item>
     
@@ -215,6 +251,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/project/fast-neural-style-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generator for Express.js&#43;TypeScript&#43;Kubernetes client.</title>
+      <link>https://jkremser.github.io/project/express-generator-ts-k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/project/express-generator-ts-k8s/</guid>
       <description></description>
     </item>
     

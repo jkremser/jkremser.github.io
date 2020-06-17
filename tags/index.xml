@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jirka Kremser</title>
@@ -48,105 +48,6 @@
     </item>
     
     <item>
-      <title>CLI</title>
-      <link>https://jkremser.github.io/tags/cli/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CNCF</title>
-      <link>https://jkremser.github.io/tags/cncf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/cncf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DSL</title>
-      <link>https://jkremser.github.io/tags/dsl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/dsl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DevConf</title>
-      <link>https://jkremser.github.io/tags/devconf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/devconf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>FOSDEM</title>
-      <link>https://jkremser.github.io/tags/fosdem/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/fosdem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript</title>
-      <link>https://jkremser.github.io/tags/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ML Sig</title>
-      <link>https://jkremser.github.io/tags/ml-sig/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/ml-sig/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Maven</title>
-      <link>https://jkremser.github.io/tags/maven/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/maven/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OpenSlava</title>
-      <link>https://jkremser.github.io/tags/openslava/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/openslava/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RX</title>
-      <link>https://jkremser.github.io/tags/rx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/rx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SAIS</title>
-      <link>https://jkremser.github.io/tags/sais/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkremser.github.io/tags/sais/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ansible</title>
       <link>https://jkremser.github.io/tags/ansible/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -192,6 +93,24 @@
     </item>
     
     <item>
+      <title>CLI</title>
+      <link>https://jkremser.github.io/tags/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CNCF</title>
+      <link>https://jkremser.github.io/tags/cncf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/cncf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>containers</title>
       <link>https://jkremser.github.io/tags/containers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -210,11 +129,29 @@
     </item>
     
     <item>
+      <title>design</title>
+      <link>https://jkremser.github.io/tags/design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>desktop</title>
       <link>https://jkremser.github.io/tags/desktop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/tags/desktop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevConf</title>
+      <link>https://jkremser.github.io/tags/devconf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/devconf/</guid>
       <description></description>
     </item>
     
@@ -246,6 +183,15 @@
     </item>
     
     <item>
+      <title>DSL</title>
+      <link>https://jkremser.github.io/tags/dsl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/dsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>electron</title>
       <link>https://jkremser.github.io/tags/electron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -255,11 +201,38 @@
     </item>
     
     <item>
+      <title>expressjs</title>
+      <link>https://jkremser.github.io/tags/expressjs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/expressjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FOSDEM</title>
+      <link>https://jkremser.github.io/tags/fosdem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/fosdem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>java</title>
       <link>https://jkremser.github.io/tags/java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://jkremser.github.io/tags/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -300,11 +273,38 @@
     </item>
     
     <item>
+      <title>Maven</title>
+      <link>https://jkremser.github.io/tags/maven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/maven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>metadata</title>
       <link>https://jkremser.github.io/tags/metadata/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/tags/metadata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>minikube</title>
+      <link>https://jkremser.github.io/tags/minikube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/minikube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML Sig</title>
+      <link>https://jkremser.github.io/tags/ml-sig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/ml-sig/</guid>
       <description></description>
     </item>
     
@@ -336,6 +336,15 @@
     </item>
     
     <item>
+      <title>OpenSlava</title>
+      <link>https://jkremser.github.io/tags/openslava/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/openslava/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>patterns</title>
       <link>https://jkremser.github.io/tags/patterns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -354,6 +363,15 @@
     </item>
     
     <item>
+      <title>pwa</title>
+      <link>https://jkremser.github.io/tags/pwa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/pwa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>python</title>
       <link>https://jkremser.github.io/tags/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -368,6 +386,24 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RX</title>
+      <link>https://jkremser.github.io/tags/rx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/rx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SAIS</title>
+      <link>https://jkremser.github.io/tags/sais/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/sais/</guid>
       <description></description>
     </item>
     
@@ -399,6 +435,15 @@
     </item>
     
     <item>
+      <title>TypeScript</title>
+      <link>https://jkremser.github.io/tags/typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>webcam</title>
       <link>https://jkremser.github.io/tags/webcam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -422,6 +467,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/tags/websockets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yaml</title>
+      <link>https://jkremser.github.io/tags/yaml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/yaml/</guid>
       <description></description>
     </item>
     
