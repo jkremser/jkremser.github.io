@@ -6,6 +6,7 @@
     <description>Recent content in kubernetes on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jkremser.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
@@ -62,6 +63,15 @@
       
       <guid>https://jkremser.github.io/project/express-generator-ts-k8s/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Prototyping a web app that can talk to Kubernetes API</title>
+      <link>https://jkremser.github.io/post/web-app-kubernetes/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/post/web-app-kubernetes/</guid>
+      <description>Motivation With the advent of various types of operators on top of Kubernetes platform, it might be useful to provide users with a fancy dashboard. However, dashboards these days are often written in JavaScript and libraries/frameworks like React.js, Vue.js or Angular. Kubernetes API on the other hand is a bunch of REST endpoints. So it all may look pretty simple, just call those endpoints from the app written in JavaScript, right?</description>
     </item>
     
   </channel>

@@ -120,8 +120,53 @@
   
   <url>
     <loc>https://jkremser.github.io/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/api/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/development/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/express.js/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/frontend/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/javascript/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/post/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/post/web-app-kubernetes/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/</loc>
+    <lastmod>2020-06-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -131,11 +176,6 @@
   
   <url>
     <loc>https://jkremser.github.io/post/spark-operator-quarkus/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/post/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -151,11 +191,6 @@
   
   <url>
     <loc>https://jkremser.github.io/tags/spark-operator/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -244,15 +279,7 @@
   </url>
   
   <url>
-    <loc>https://jkremser.github.io/tags/javascript/</loc>
-  </url>
-  
-  <url>
     <loc>https://jkremser.github.io/tags/jupyter/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jkremser.github.io/tags/kubernetes/</loc>
   </url>
   
   <url>
