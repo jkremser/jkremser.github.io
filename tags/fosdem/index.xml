@@ -5,11 +5,7 @@
     <link>https://jkremser.github.io/tags/fosdem/</link>
     <description>Recent content in FOSDEM on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://jkremser.github.io/tags/fosdem/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://jkremser.github.io/tags/fosdem/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
       <link>https://jkremser.github.io/presentation/fosdem18/</link>

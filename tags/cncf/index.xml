@@ -5,11 +5,7 @@
     <link>https://jkremser.github.io/tags/cncf/</link>
     <description>Recent content in CNCF on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://jkremser.github.io/tags/cncf/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://jkremser.github.io/tags/cncf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spark Operator @ CNCF Big Data Sig</title>
       <link>https://jkremser.github.io/presentation/spark-operator-2/</link>

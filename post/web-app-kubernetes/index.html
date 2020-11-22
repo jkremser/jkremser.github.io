@@ -66,7 +66,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.59.1" />
+ <meta name="generator" content="Hugo 0.78.2" />
         
 
         
@@ -155,42 +155,28 @@
 
     </div>
 
-    <div align="start" class="content">
-
-<h1 id="motivation">Motivation</h1>
-
+    <div align="start" class="content"><h1 id="motivation">Motivation</h1>
 <p>With the advent of various types of <a href="https://coreos.com/operators/">operators</a> on top of Kubernetes platform, it might be useful to provide users with a fancy dashboard. However, dashboards these days are often written in JavaScript and libraries/frameworks like React.js, Vue.js or Angular. Kubernetes API on the other hand is a bunch of REST endpoints. So it all may look pretty simple, just call those endpoints from the app written in JavaScript, right? Unfortunatelly, it&rsquo;s not that simple, because of the AuthN and AuthZ that is by default turned on in the Kubernetes REST endpoints and giving the bearer token to the client-side JavaScript app (in browser) might be a security risk.</p>
-
 <p>Let&rsquo;s dive into the problem and let&rsquo;s code some very simple web application in the following couple of blog posts.</p>
-
 <h2 id="design">Design</h2>
-
 <p>Here is the idea. We know that client-side JavaScript app will by definition run on the client side, but at the same time we need to be able to access the K8s api using the token.
-So let&rsquo;s split the webapp into two pieces:
- - server-side: the rest endpoints with only those APIs that we will be calling from the client-side
- - client-side: application in React.js</p>
-
+So let&rsquo;s split the webapp into two pieces:</p>
+<ul>
+<li>server-side: the rest endpoints with only those APIs that we will be calling from the client-side</li>
+<li>client-side: application in React.js</li>
+</ul>
 <p>In other words the server-side rest endpoints will be transforming the incoming request to the request for the Kubernetes API. Because of the fact it will be deployed on a pod in k8s, it will have an access to the secrets with the CA certificate and baerer token representing the service account. So that RBAC can be controlled by Kubernetes itself. Our goal will be to list all the deployments in the cluster that have given label on them. This is a common pattern when working with operators, because it&rsquo;s a good practice to label the resources it creates.</p>
-
 <figure>
     <img src="/k8s-webapp-1/k8s-web-app.svg"/> 
 </figure>
 
-
-<h2 id="part-1-the-server-side">Part 1 - the server-side</h2>
-
+<h2 id="part-1---the-server-side">Part 1 - the server-side</h2>
 <h3 id="generate-the-project">Generate the project</h3>
-
 <p>We are lazy so we would like to write as little of code as possible. Let&rsquo;s scaffold an example Express.js application using <a href="https://github.com/jkremser/express-generator-typescript-k8s">express-generator-typescript-k8s</a>. It generates also the swagger specs (OpenAPI 3) and contains also swagger ui out of the box. It also comes with the preinstalled JavaScript linter, Kubernetes client, TypeScript and other goodies.</p>
-
 <p>Install the generator:</p>
-
-<pre><code class="language-bash">$ npx express-generator-typescript-k8s --openAPI &quot;rest-api&quot;
-</code></pre>
-
-<p>Check what has been generated:</p>
-
-<pre><code class="language-bash">$ tree rest-api/src/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npx express-generator-typescript-k8s --openAPI <span style="color:#e6db74">&#34;rest-api&#34;</span>
+</code></pre></div><p>Check what has been generated:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tree rest-api/src/
 rest-api/src/
 ├── api.yaml
 ├── entities
@@ -213,137 +199,95 @@ rest-api/src/
 │   └── Logger.ts
 └── views
     └── index.html
-</code></pre>
-
-<p>You can run the application in development mode by <code>npm run start:dev</code> and explore the simple web ui on <code>localhost:3000</code>. Here is how it looks like (assuming you have an access to a running k8s cluster):</p>
-
+</code></pre></div><p>You can run the application in development mode by <code>npm run start:dev</code> and explore the simple web ui on <code>localhost:3000</code>. Here is how it looks like (assuming you have an access to a running k8s cluster):</p>
 <figure>
     <img src="/k8s-webapp-1/webui.png"/> 
 </figure>
 
-
 <p>It lists the Deployment resources in Kubernetes, so basically same output as the <code>kubectl get deployments --all-namespaces</code>. If you open the dev console in the browser, you can find out that the web ui calls the rest endpoint <code>/api/deployments/</code>, we can also try the <code>curl http://localhost:3000/api/deployments/</code>. The webui is vanilla javascript and css and we will not be using it. We will write a new fancy UI in react.js that will be talking to the REST endpoint. The kubernetes client is used in the <code>src/routes/Deployments.ts</code> and here is a self-explanatory example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">...
+<span style="color:#75715e">/******************************************************************************
+</span><span style="color:#75715e"> *                      Get All Deployments - &#34;GET /api/deployments/&#34;
+</span><span style="color:#75715e"> ******************************************************************************/</span>
 
-<pre><code class="language-JavaScript">...
-/******************************************************************************
- *                      Get All Deployments - &quot;GET /api/deployments/&quot;
- ******************************************************************************/
-
-router.get('/', async (req: Request, res: Response) =&gt; {
-    const k8sDeployments = await k8sAppsApi.listDeploymentForAllNamespaces();
-    const deployments = k8sDeployments.body.items.map(Deployment.parseDeployment);
-    console.log(deployments);
-    return res.status(OK).json({deployments});
+<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Request</span>, <span style="color:#a6e22e">res</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Response</span>) =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">k8sDeployments</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">k8sAppsApi</span>.<span style="color:#a6e22e">listDeploymentForAllNamespaces</span>();
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">deployments</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">k8sDeployments</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">Deployment</span>.<span style="color:#a6e22e">parseDeployment</span>);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">deployments</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#a6e22e">OK</span>).<span style="color:#a6e22e">json</span>({<span style="color:#a6e22e">deployments</span>});
 });
 ...
-</code></pre>
-
-<p>This is a good starting point. Let&rsquo;s extend the example REST API and add an endpoint that would list all our CustomResources.</p>
-
+</code></pre></div><p>This is a good starting point. Let&rsquo;s extend the example REST API and add an endpoint that would list all our CustomResources.</p>
 <h3 id="custom-resources-in-kubernetes">Custom Resources in Kubernetes</h3>
-
 <p>A lot of content has been written on this topic so I&rsquo;ll try to keep it brief and stick to our task. For more comprehensive overview on this topic, I suggest the <a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">k8s docs</a>.</p>
-
 <p>First let&rsquo;s define our CRD to have something to work with or we can use a real one from an existing operator. It&rsquo;s common in the JavaScript land to have the todo app as the hello world, so why not to use highly sophisticated distributed system that can schedule pods as a memo storage? :)</p>
-
 <p>example CRD:</p>
-
-<pre><code class="language-bash">$ cat &lt;&lt;CRD | kubectl apply -f -
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: todos.jkremser.github.io
-spec:
-  group: jkremser.github.io
-  names:
-    kind: Todo
-    listKind: TodoList
-    plural: todos
-    singular: todo
-  scope: Namespaced
-  version: v1
-  additionalPrinterColumns:
-  - name: Text
-    type: string
-    description: The task to be done.
-    JSONPath: .spec.text
-  - name: Done
-    type: boolean
-    JSONPath: .spec.done
-CRD
-</code></pre>
-
-<p>Now we can query the kubernetes for Todo resources:</p>
-
-<pre><code class="language-bash">$ kubectl get todos
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat <span style="color:#e6db74">&lt;&lt;CRD | kubectl apply -f -
+</span><span style="color:#e6db74">kind: CustomResourceDefinition
+</span><span style="color:#e6db74">apiVersion: apiextensions.k8s.io/v1beta1
+</span><span style="color:#e6db74">metadata:
+</span><span style="color:#e6db74">  name: todos.jkremser.github.io
+</span><span style="color:#e6db74">spec:
+</span><span style="color:#e6db74">  group: jkremser.github.io
+</span><span style="color:#e6db74">  names:
+</span><span style="color:#e6db74">    kind: Todo
+</span><span style="color:#e6db74">    listKind: TodoList
+</span><span style="color:#e6db74">    plural: todos
+</span><span style="color:#e6db74">    singular: todo
+</span><span style="color:#e6db74">  scope: Namespaced
+</span><span style="color:#e6db74">  version: v1
+</span><span style="color:#e6db74">  additionalPrinterColumns:
+</span><span style="color:#e6db74">  - name: Text
+</span><span style="color:#e6db74">    type: string
+</span><span style="color:#e6db74">    description: The task to be done.
+</span><span style="color:#e6db74">    JSONPath: .spec.text
+</span><span style="color:#e6db74">  - name: Done
+</span><span style="color:#e6db74">    type: boolean
+</span><span style="color:#e6db74">    JSONPath: .spec.done
+</span><span style="color:#e6db74">CRD</span>
+</code></pre></div><p>Now we can query the kubernetes for Todo resources:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl get todos
 No resources found in default namespace.
-</code></pre>
-
-<p>and create them:</p>
-
-<pre><code class="language-bash">$ cat &lt;&lt;CR | kubectl apply -f -
-apiVersion: jkremser.github.io/v1
-kind: Todo
-metadata:
-  name: finish-this-blogpost
-spec:
-  text: &quot;Enhance the content with more self-referential stuff.&quot;
-  done: false
-CR
+</code></pre></div><p>and create them:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat <span style="color:#e6db74">&lt;&lt;CR | kubectl apply -f -
+</span><span style="color:#e6db74">apiVersion: jkremser.github.io/v1
+</span><span style="color:#e6db74">kind: Todo
+</span><span style="color:#e6db74">metadata:
+</span><span style="color:#e6db74">  name: finish-this-blogpost
+</span><span style="color:#e6db74">spec:
+</span><span style="color:#e6db74">  text: &#34;Enhance the content with more self-referential stuff.&#34;
+</span><span style="color:#e6db74">  done: false
+</span><span style="color:#e6db74">CR</span>
 
 $ kubectl get todos
 NAME                   TEXT                                                    DONE
 finish-this-blogpost   Enhance the content with more self-referential stuff.   false
-</code></pre>
-
-<h3 id="add-rest-endpoint">Add REST Endpoint</h3>
-
+</code></pre></div><h3 id="add-rest-endpoint">Add REST Endpoint</h3>
 <p>Now, that we are able to CRUD our <code>Todos</code> in Kubernetes using the CLI client, let&rsquo;s extend the REST api to do the same.</p>
-
 <p>To follow the project structure, we will create a new router for express.js server called <code>src/routes/Todos.ts</code> with the following content:</p>
+<p>example for &lsquo;get all&rsquo; (full version [here](todo: link na github)):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">/******************************************************************************
+</span><span style="color:#75715e"> *                      Get All Todos - &#34;GET /api/todos/&#34;
+</span><span style="color:#75715e"> ******************************************************************************/</span>
 
-<p>example for &lsquo;get all&rsquo; (full version <a href="todo: link na github">here</a>):</p>
+<span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Request</span>, <span style="color:#a6e22e">res</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Response</span>) =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crdClient</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">CustomObjectsApi</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">k8sKubeConfig</span>.<span style="color:#a6e22e">makeApiClient</span>(<span style="color:#a6e22e">CustomObjectsApi</span>);
 
-<pre><code class="language-JavaScript">/******************************************************************************
- *                      Get All Todos - &quot;GET /api/todos/&quot;
- ******************************************************************************/
-
-router.get('/', async (req: Request, res: Response) =&gt; {
-    const crdClient: CustomObjectsApi = k8sKubeConfig.makeApiClient(CustomObjectsApi);
-
-    const k8sTodos: any = await crdClient.listNamespacedCustomObject('jkremser.github.io', 'v1', 'default', 'todos');
-    const todos = k8sTodos.body.items.map(Todo.parse);
-    console.log(todos);
-    return res.status(OK).json({todos});
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">k8sTodos</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">any</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">crdClient</span>.<span style="color:#a6e22e">listNamespacedCustomObject</span>(<span style="color:#e6db74">&#39;jkremser.github.io&#39;</span>, <span style="color:#e6db74">&#39;v1&#39;</span>, <span style="color:#e6db74">&#39;default&#39;</span>, <span style="color:#e6db74">&#39;todos&#39;</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">todos</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">k8sTodos</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">Todo</span>.<span style="color:#a6e22e">parse</span>);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">todos</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#a6e22e">OK</span>).<span style="color:#a6e22e">json</span>({<span style="color:#a6e22e">todos</span>});
 });
-</code></pre>
-
-<p>We also need to register the new router in <code>src/routes/index.ts</code> and create the entity called <code>Todo</code>, clone the git repo for working version.</p>
-
+</code></pre></div><p>We also need to register the new router in <code>src/routes/index.ts</code> and create the entity called <code>Todo</code>, clone the git repo for working version.</p>
 <p>After restarting the app, we should be able to call the API:</p>
-
 <figure>
     <img src="/k8s-webapp-1/curl.png"/> 
 </figure>
 
-
-<!-- ```bash
-$ curl -s http://localhost:3000/api/todos/ | jq
-{
-  "todos": [
-    {
-      "name": "finish-this-blogpost",
-      "done": false,
-      "text": "Enhance the content with more self-referential stuff."
-    }
-  ]
-}
-``` -->
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>\o/</p>
-
 <h2 id="conclusion">Conclusion</h2>
-
 <p>We have a working REST endpoints that provide access to our custom resources in K8s cluster. This concludes the part 1. Stay tuned for part 2.</p>
 </div>
 
@@ -379,7 +323,7 @@ $ curl -s http://localhost:3000/api/todos/ | jq
 </main>
 
         <footer>
-            <p class="copyright text-muted">🄯 Copyleft: All rights not-reserved, here is the <a href='https://github.com/jkremser/web'>code</a></p>
+            <p class="copyright text-muted">(ɔ) Copyleft: All rights not-reserved, here is the <!-- raw HTML omitted -->code<!-- raw HTML omitted --></p>
         </footer>
 
         

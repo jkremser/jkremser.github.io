@@ -5,11 +5,7 @@
     <link>https://jkremser.github.io/tags/electron/</link>
     <description>Recent content in electron on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://jkremser.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://jkremser.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Chat Electron</title>
       <link>https://jkremser.github.io/project/g-chat-electron/</link>

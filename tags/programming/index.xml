@@ -5,11 +5,7 @@
     <link>https://jkremser.github.io/tags/programming/</link>
     <description>Recent content in programming on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://jkremser.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://jkremser.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reactive Programming @ DevConf 16</title>
       <link>https://jkremser.github.io/presentation/devconf16/</link>

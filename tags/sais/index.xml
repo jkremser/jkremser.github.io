@@ -5,11 +5,7 @@
     <link>https://jkremser.github.io/tags/sais/</link>
     <description>Recent content in SAIS on Jirka Kremser</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://jkremser.github.io/tags/sais/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://jkremser.github.io/tags/sais/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spark Operator—Deploy, Manage and Monitor Spark Clusters on Kubernetes @ Spark Summit eu 19</title>
       <link>https://jkremser.github.io/presentation/sais-eu19/</link>
