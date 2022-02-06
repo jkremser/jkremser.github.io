@@ -10,31 +10,31 @@
         <style>
 
     html body {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Mulish', sans-serif;
         background-color: #dfe2e5;
     }
 
     :root {
         --accent: #1a574a;
-        --border-width:  5px ;
+        --border-width:  10px ;
     }
 
 </style>
 
 
-<link rel="stylesheet" href="https://jkremser.github.io/css/main.css">
 
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://jkremser.github.io/css/main.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -150,6 +150,29 @@
     
       
 
+    <h4><a href="https://fosdem.org/2022/schedule/event/container_k8gb_balancer/">A cloud native Kubernetes Global Balancer @ FOSDEM 22</a></h4>
+    <h5>k8gb is DNS based global service load balancer that can interconnect multiple Kubernetes clusters into one resilient system. Join this talk to learn how it can handle a failover scenario when pods in one cluster go down and second cluster in different location saves the situation.
+k8gb is an open-source Kubernetes operator that is deployed in each participating cluster. It is comprised of CoreDNS, ExternalDNS and the k8gb controller itself. Using ExternalDNS it can create a zone delegation on a common cloud DNS server like Route53 or Infoblox so that the embedded CoreDNS servers work as an authoritative DNS. K8gb controller makes sure these CoreDNS servers are updated accordingly based on the readiness probes of the application.
+In this sense this solution is unique, because it is using Kubernetes native tools with customisable probes and battle tested DNS protocol instead of HTTP pings or other similar approaches where single point of failure might be a problem. In k8gb architecture all k8s clusters are equal and there is no SPoF except the common edge DNS server.</h5>
+    
+<a href="https://jkremser.github.io/tags/k8gb"><kbd class="item-tag">k8gb</kbd></a>
+
+<a href="https://jkremser.github.io/tags/fosdem"><kbd class="item-tag">FOSDEM</kbd></a>
+
+<a href="https://jkremser.github.io/tags/kubernetes-operator"><kbd class="item-tag">kubernetes-operator</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+      
+
+    
+      
+
     <h4><a href="https://archive.fosdem.org/2018/schedule/speaker/jiri_kremser/">Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</a></h4>
     <h5>I will show the Blockchain analysis in Jupyter interactive notebook using the external Spark cluster running in Kubernetes, everything dockerized.
 The talk will briefly describe how Blockchain transactions work, but most of the time would be the demo. In the demo I will show how we can run various queries on the publicly available Blockchain data, graph algorithms such as PageRank for identifying significant BTC addresses and more.
@@ -173,7 +196,7 @@ Intended audience: intermediate, analysts, Bitcoin/Altcoin enthusiasts</h5>
 
 
         <footer>
-            <p class="copyright text-muted">(ɔ) Copyleft: All rights not-reserved, here is the <!-- raw HTML omitted -->code<!-- raw HTML omitted --></p>
+            <p class="copyright text-muted">(ɔ) Copyleft: All rights not-reserved, here is the <a href='https://github.com/jkremser/web'>code</a></p>
         </footer>
 
         

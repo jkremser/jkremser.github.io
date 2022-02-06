@@ -3,6 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jkremser.github.io/presentation/fosdem22/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/presentation/k8gb-kubecon-office-hrs/</loc>
+  </url>
+  
+  <url>
     <loc>https://jkremser.github.io/presentation/devconf-us19/</loc>
   </url>
   
@@ -283,6 +291,14 @@
   </url>
   
   <url>
+    <loc>https://jkremser.github.io/tags/k8gb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/kubecon/</loc>
+  </url>
+  
+  <url>
     <loc>https://jkremser.github.io/tags/kubernetes-operator/</loc>
   </url>
   
@@ -312,6 +328,10 @@
   
   <url>
     <loc>https://jkremser.github.io/tags/notebook/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jkremser.github.io/tags/office-hours/</loc>
   </url>
   
   <url>
