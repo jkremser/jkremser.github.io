@@ -8,10 +8,10 @@
     <language>en-us</language><atom:link href="https://jkremser.github.io/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes 101</title>
-      <link>https://jkremser.github.io/presentation/kubernetes-101-tm19-ostrava/</link>
+      <link>https://jkremser.github.io/talks/kubernetes-101-tm19-ostrava/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/kubernetes-101-tm19-ostrava/</guid>
+      <guid>https://jkremser.github.io/talks/kubernetes-101-tm19-ostrava/</guid>
       <description></description>
     </item>
     

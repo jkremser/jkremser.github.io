@@ -9,19 +9,19 @@
     <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://jkremser.github.io/tags/spark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Polyglot Operators, Spark Operator @ DevConf.us 19</title>
-      <link>https://jkremser.github.io/presentation/devconf-us19/</link>
+      <link>https://jkremser.github.io/talks/devconf-us19/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf-us19/</guid>
+      <guid>https://jkremser.github.io/talks/devconf-us19/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spark Operator—Deploy, Manage and Monitor Spark Clusters on Kubernetes @ Spark Summit eu 19</title>
-      <link>https://jkremser.github.io/presentation/sais-eu19/</link>
+      <link>https://jkremser.github.io/talks/sais-eu19/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/sais-eu19/</guid>
+      <guid>https://jkremser.github.io/talks/sais-eu19/</guid>
       <description></description>
     </item>
     
@@ -36,37 +36,37 @@
     
     <item>
       <title>Spark Operator @ OpenShift ML Sig</title>
-      <link>https://jkremser.github.io/presentation/spark-operator-1/</link>
+      <link>https://jkremser.github.io/talks/spark-operator-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/spark-operator-1/</guid>
+      <guid>https://jkremser.github.io/talks/spark-operator-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
-      <link>https://jkremser.github.io/presentation/fosdem18/</link>
+      <link>https://jkremser.github.io/talks/fosdem18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/fosdem18/</guid>
+      <guid>https://jkremser.github.io/talks/fosdem18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spark Operator @ CNCF Big Data Sig</title>
-      <link>https://jkremser.github.io/presentation/spark-operator-2/</link>
+      <link>https://jkremser.github.io/talks/spark-operator-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/spark-operator-2/</guid>
+      <guid>https://jkremser.github.io/talks/spark-operator-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Analyzing Blockchain Transactions in Apache Spark @ Spark Summit 18</title>
-      <link>https://jkremser.github.io/presentation/sais18/</link>
+      <link>https://jkremser.github.io/talks/sais18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/sais18/</guid>
+      <guid>https://jkremser.github.io/talks/sais18/</guid>
       <description></description>
     </item>
     
@@ -81,28 +81,28 @@
     
     <item>
       <title>Spark on OpenSlava 2017</title>
-      <link>https://jkremser.github.io/presentation/open-slava-17/</link>
+      <link>https://jkremser.github.io/talks/open-slava-17/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/open-slava-17/</guid>
+      <guid>https://jkremser.github.io/talks/open-slava-17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apache Spark on Kubernetes 2018</title>
-      <link>https://jkremser.github.io/presentation/open-slava-18/</link>
+      <link>https://jkremser.github.io/talks/open-slava-18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/open-slava-18/</guid>
+      <guid>https://jkremser.github.io/talks/open-slava-18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blockchain Analysis @ DevConf 18</title>
-      <link>https://jkremser.github.io/presentation/devconf18/</link>
+      <link>https://jkremser.github.io/talks/devconf18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf18/</guid>
+      <guid>https://jkremser.github.io/talks/devconf18/</guid>
       <description></description>
     </item>
     
@@ -122,7 +122,7 @@
       
       <guid>https://jkremser.github.io/post/spark-operator-quarkus/</guid>
       <description>Spark Operator ❤ Quarkus This attempts to describe the migration path of Spark Operator from the conventional (hotspot) JVM to quarkus.io / GraalVM.
-  Why Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are.</description>
+Why Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are. Only then it triggers the JIT compiler that produces the platform specific assembly code.</description>
     </item>
     
   </channel>

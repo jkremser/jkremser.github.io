@@ -8,19 +8,19 @@
     <language>en-us</language><atom:link href="https://jkremser.github.io/tags/openshift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Polyglot Operators, Spark Operator @ DevConf.us 19</title>
-      <link>https://jkremser.github.io/presentation/devconf-us19/</link>
+      <link>https://jkremser.github.io/talks/devconf-us19/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf-us19/</guid>
+      <guid>https://jkremser.github.io/talks/devconf-us19/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spark Operator—Deploy, Manage and Monitor Spark Clusters on Kubernetes @ Spark Summit eu 19</title>
-      <link>https://jkremser.github.io/presentation/sais-eu19/</link>
+      <link>https://jkremser.github.io/talks/sais-eu19/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/sais-eu19/</guid>
+      <guid>https://jkremser.github.io/talks/sais-eu19/</guid>
       <description></description>
     </item>
     
@@ -35,19 +35,19 @@
     
     <item>
       <title>Spark Operator @ OpenShift ML Sig</title>
-      <link>https://jkremser.github.io/presentation/spark-operator-1/</link>
+      <link>https://jkremser.github.io/talks/spark-operator-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/spark-operator-1/</guid>
+      <guid>https://jkremser.github.io/talks/spark-operator-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Analzying Blockchain transactions in Apache Spark @ FOSDEM 18</title>
-      <link>https://jkremser.github.io/presentation/fosdem18/</link>
+      <link>https://jkremser.github.io/talks/fosdem18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/fosdem18/</guid>
+      <guid>https://jkremser.github.io/talks/fosdem18/</guid>
       <description></description>
     </item>
     
@@ -62,37 +62,37 @@
     
     <item>
       <title>Analyzing Blockchain Transactions in Apache Spark @ Spark Summit 18</title>
-      <link>https://jkremser.github.io/presentation/sais18/</link>
+      <link>https://jkremser.github.io/talks/sais18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/sais18/</guid>
+      <guid>https://jkremser.github.io/talks/sais18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spark on OpenSlava 2017</title>
-      <link>https://jkremser.github.io/presentation/open-slava-17/</link>
+      <link>https://jkremser.github.io/talks/open-slava-17/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/open-slava-17/</guid>
+      <guid>https://jkremser.github.io/talks/open-slava-17/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apache Spark on Kubernetes 2018</title>
-      <link>https://jkremser.github.io/presentation/open-slava-18/</link>
+      <link>https://jkremser.github.io/talks/open-slava-18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/open-slava-18/</guid>
+      <guid>https://jkremser.github.io/talks/open-slava-18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blockchain Analysis @ DevConf 18</title>
-      <link>https://jkremser.github.io/presentation/devconf18/</link>
+      <link>https://jkremser.github.io/talks/devconf18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf18/</guid>
+      <guid>https://jkremser.github.io/talks/devconf18/</guid>
       <description></description>
     </item>
     

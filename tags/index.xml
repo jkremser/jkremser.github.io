@@ -125,7 +125,7 @@
     </item>
     
     <item>
-      <title>bitcoin</title>
+      <title>Bitcoin</title>
       <link>https://jkremser.github.io/tags/bitcoin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -319,6 +319,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jkremser.github.io/tags/library/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log2rbac</title>
+      <link>https://jkremser.github.io/tags/log2rbac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/tags/log2rbac/</guid>
       <description></description>
     </item>
     

@@ -7,38 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://jkremser.github.io/tags/devconf/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Polyglot Operators, Spark Operator @ DevConf.us 19</title>
-      <link>https://jkremser.github.io/presentation/devconf-us19/</link>
+      <title>log2rbac @ DevConf mini 22</title>
+      <link>https://jkremser.github.io/talks/devconf-mini-22/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf-us19/</guid>
+      <guid>https://jkremser.github.io/talks/devconf-mini-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Polyglot Operators, Spark Operator @ DevConf.us 19</title>
+      <link>https://jkremser.github.io/talks/devconf-us19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkremser.github.io/talks/devconf-us19/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blockchain Analysis @ DevConf 18</title>
-      <link>https://jkremser.github.io/presentation/devconf18/</link>
+      <link>https://jkremser.github.io/talks/devconf18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf18/</guid>
+      <guid>https://jkremser.github.io/talks/devconf18/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reactive Programming @ DevConf 16</title>
-      <link>https://jkremser.github.io/presentation/devconf16/</link>
+      <link>https://jkremser.github.io/talks/devconf16/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf16/</guid>
+      <guid>https://jkremser.github.io/talks/devconf16/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writing an internal DSL language in Scala</title>
-      <link>https://jkremser.github.io/presentation/devconf14/</link>
+      <link>https://jkremser.github.io/talks/devconf14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkremser.github.io/presentation/devconf14/</guid>
+      <guid>https://jkremser.github.io/talks/devconf14/</guid>
       <description></description>
     </item>
     

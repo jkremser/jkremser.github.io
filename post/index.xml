@@ -23,7 +23,7 @@
       
       <guid>https://jkremser.github.io/post/spark-operator-quarkus/</guid>
       <description>Spark Operator ❤ Quarkus This attempts to describe the migration path of Spark Operator from the conventional (hotspot) JVM to quarkus.io / GraalVM.
-  Why Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are.</description>
+Why Applications written in Java that run on JVM are often long running in nature, and optimized for the peek performance. JVM maintains the counters of the method invocations and has also other ways to figure out what the hot paths in the byte code are. Only then it triggers the JIT compiler that produces the platform specific assembly code.</description>
     </item>
     
   </channel>
