@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>kubernetes-operator</title>
+<title>rbac</title>
 <style>html body{font-family:mulish,sans-serif;background-color:#dfe2e5}:root{--accent:#1a574a;--border-width:10px}</style>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css>
 <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
@@ -20,8 +20,8 @@
 <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
 <script>$(document).on('click',function(){$('.collapse').collapse('hide')})</script>
 <meta name=generator content="Hugo 0.91.2">
-<link href=/tags/kubernetes-operator/index.xml rel=alternate type=application/rss+xml title="Jirka Kremser">
-<link href=/tags/kubernetes-operator/index.xml rel=feed type=application/rss+xml title="Jirka Kremser">
+<link href=/tags/rbac/index.xml rel=alternate type=application/rss+xml title="Jirka Kremser">
+<link href=/tags/rbac/index.xml rel=feed type=application/rss+xml title="Jirka Kremser">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141311316-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-141311316-1')</script>
 <script type=text/javascript async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -30,7 +30,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 <div class=container>
 <div class=navbar-header>
-<a class="navbar-brand visible-xs" href=#>kubernetes-operator</a>
+<a class="navbar-brand visible-xs" href=#>rbac</a>
 <button class=navbar-toggle data-target=.navbar-collapse data-toggle=collapse>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
@@ -55,49 +55,16 @@
 </div>
 </nav>
 <main>
-<h2>kubernetes-operator</h2>
+<h2>rbac</h2>
 <div class=item>
-<h4><a href="https://www.youtube.com/watch?v=Lw2omArsYAE">Spark Operator @ OpenShift ML Sig</a></h4>
-<h5>Really short intro into operators and also comparison of two existing operators for Apache Spark.</h5>
-<a href=https://jkremser.github.io/tags/spark><kbd class=item-tag>spark</kbd></a>
-<a href=https://jkremser.github.io/tags/ml-sig><kbd class=item-tag>ML Sig</kbd></a>
-<a href=https://jkremser.github.io/tags/openshift><kbd class=item-tag>openshift</kbd></a>
-<a href=https://jkremser.github.io/tags/kubernetes-operator><kbd class=item-tag>kubernetes-operator</kbd></a>
-<a href=https://jkremser.github.io/year/2018><kbd class=item-tag>2018</kbd></a>
-</div>
-<div class=item>
-<h4><a href="https://www.techmeetup.cz/?fbclid=IwAR3fJqz6GioU1MeZqSgHVpbIANdh-KLttmi7WfUl298tA9wwHl6GIaBwyRI">Kubernetes 101</a></h4>
-<h5>Let's go together through the cloud native landscape and explore all the goodies that may help you to develop scalable and reliable distributed systems. Hopefully, you will leave this talk with basic understanding of Kubernetes and motivated to use it in production.</h5>
+<h4><a href=https://github.com/jkremser/log2rbac-operator>log2rbac Operator</a></h4>
+<h5>Kubernetes operator that helps you to set up the RBAC rules for your application. If requested, it scans the application's log files for authorization errors and adds them as exceptions/rights to the associated {Cluster}Role. It is like having a sudo command for your service accounts. However, with great power comes great responsibility. The goal of the tool is to find the minimum set of rights that is needed for your workload to run instead of using the cluster admin for everything.</h5>
+<a href=https://jkremser.github.io/tags/rbac><kbd class=item-tag>rbac</kbd></a>
 <a href=https://jkremser.github.io/tags/kubernetes><kbd class=item-tag>kubernetes</kbd></a>
-<a href=https://jkremser.github.io/tags/yaml><kbd class=item-tag>yaml</kbd></a>
-<a href=https://jkremser.github.io/tags/minikube><kbd class=item-tag>minikube</kbd></a>
 <a href=https://jkremser.github.io/tags/kubernetes-operator><kbd class=item-tag>kubernetes-operator</kbd></a>
-<a href=https://jkremser.github.io/year/2019><kbd class=item-tag>2019</kbd></a>
-</div>
-<div class=item>
-<h4><a href="https://docs.google.com/document/d/1pnF38NF6N5eM8DlK088XUW85Vms4V2uTsGZvSp8MNIA/edit#heading=h.lpxt0092rqhh">Spark Operator @ CNCF Big Data Sig</a></h4>
-<h5>Brief talk and demo about Spark Operator.</h5>
-<a href=https://jkremser.github.io/tags/spark><kbd class=item-tag>spark</kbd></a>
-<a href=https://jkremser.github.io/tags/kubernetes><kbd class=item-tag>kubernetes</kbd></a>
-<a href=https://jkremser.github.io/tags/cncf><kbd class=item-tag>CNCF</kbd></a>
-<a href=https://jkremser.github.io/tags/kubernetes-operator><kbd class=item-tag>kubernetes-operator</kbd></a>
-<a href=https://jkremser.github.io/year/2018><kbd class=item-tag>2018</kbd></a>
-</div>
-<div class=item>
-<h4><a href=https://www.openslava.sk/2017/#/sessions/5>Spark on OpenSlava 2017</a></h4>
-<h5>I will show how you can leverage the containers and run the Spark cluster in PaaS, namely OpenShift and Kubernetes. For demonstration purposes, I'll be demoing the Blockchain analysis in Jupyter notebook using the Spark cluster running in OpenShift, everything dockerized. I am out of buzzwords.</h5>
-<a href=https://jkremser.github.io/tags/spark><kbd class=item-tag>spark</kbd></a>
-<a href=https://jkremser.github.io/tags/openslava><kbd class=item-tag>OpenSlava</kbd></a>
-<a href=https://jkremser.github.io/tags/openshift><kbd class=item-tag>openshift</kbd></a>
-<a href=https://jkremser.github.io/tags/kubernetes-operator><kbd class=item-tag>kubernetes-operator</kbd></a>
-<a href=https://jkremser.github.io/year/2017><kbd class=item-tag>2017</kbd></a>
+<a href=https://jkremser.github.io/tags/controller><kbd class=item-tag>controller</kbd></a>
 </div>
 </main>
-<div class=pages>
-<a class="icon pages-icon" href=/tags/kubernetes-operator/ rel=prev>
-<i class="fa fa-arrow-left"></i>
-</a>
-</div>
 <footer>
 <p class="copyright text-muted">(ɔ) Copyleft: All rights not-reserved, here is the <a href=https://github.com/jkremser/web>code</a></p>
 </footer>
