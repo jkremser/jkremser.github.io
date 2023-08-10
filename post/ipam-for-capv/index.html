@@ -1,0 +1,279 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>IP Address Management for Cluster API & on-prem</title>
+<style>html body{font-family:mulish,sans-serif;background-color:#dfe2e5}:root{--accent:#1a574a;--border-width:10px}</style>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css>
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
+<link rel=stylesheet href=https://jkremser.github.io/css/main.css>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Mulish">
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
+<script>$(document).on('click',function(){$('.collapse').collapse('hide')})</script>
+<meta name=generator content="Hugo 0.91.2">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141311316-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-141311316-1')</script>
+<script type=text/javascript async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class=container>
+<div class=navbar-header>
+<a class="navbar-brand visible-xs" href=#>IP Address Management for Cluster API & on-prem</a>
+<button class=navbar-toggle data-target=.navbar-collapse data-toggle=collapse>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+</div>
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li><a href=/>Home</a></li>
+<li><a href=/post/>Posts</a></li>
+<li><a href=/project/>Projects</a></li>
+<li><a href=/talks/>Talks</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li class=navbar-icon><a href=https://github.com/jkremser/><i class="fa fa-github"></i></a></li>
+<li class=navbar-icon><a href=https://twitter.com/JirkaKremser/><i class="fa fa-twitter"></i></a></li>
+<li class=navbar-icon><a href=https://www.linkedin.com/in/jirik/><i class="fa fa-linkedin"></i></a></li>
+<li class=navbar-icon><a href=https://stackoverflow.com/users/1594980/jiri-kremser><i class="fa fa-stack-overflow"></i></a></li>
+<li class=navbar-icon><a href=mailto:jiri.kremser@gmail.com><i class="fa fa-envelope-o"></i></a></li>
+</ul>
+</div>
+</div>
+</nav>
+<main>
+<div>
+<h2>IP Address Management for Cluster API & on-prem</h2>
+<h5>August 8, 2023</h5>
+<a href=https://jkremser.github.io/tags/kubernetes><kbd class=item-tag>kubernetes</kbd></a>
+<a href=https://jkremser.github.io/tags/development><kbd class=item-tag>development</kbd></a>
+<a href=https://jkremser.github.io/tags/capi><kbd class=item-tag>capi</kbd></a>
+<a href=https://jkremser.github.io/tags/ipam><kbd class=item-tag>ipam</kbd></a>
+<a href=https://jkremser.github.io/tags/capv><kbd class=item-tag>capv</kbd></a>
+<a href=https://jkremser.github.io/tags/kube-vip><kbd class=item-tag>kube-vip</kbd></a>
+</div>
+<div align=start class=content>
+<div style=padding-top:80px></div>
+<h1 id=motivation>Motivation</h1>
+<p>Cluster API (CAPI) provides a uniform workflow for deploying and operating Kubernetes clusters. It aims to abstract its user from the infrastructure level.
+The infrastructure in the form of VMs can be provided by a cloud provider like AWS or Azure. However, these platforms often support also managed Kubernetes experience (EKS, AKS), where a lot of features like load balancing or managed control planes are just there.</p>
+<p>In this blog post we will be looking into a situation where no advanced features are provided and all we have is a virtualization platform like <code>vSphere</code>.
+In this case, we are on our own and we need to manage the load balancing and IP management on our own. The article is tackling only the IPv4, but it could be generalized also to the IPv6 stack.
+<div style=padding-top:20px></div>
+</p>
+<h2 id=problem-landscape>Problem Landscape</h2>
+<p>For the Cluster API to be a useful tool, it needs to be installed in certain flavor denoting what infrastructures it can talk to. This is captured in the infrastructure provider component. We will be using <code>CAPV</code> (Cluster API provider for vSphere). <code>CAPV</code> itself can already deploy a brand new Kubernetes cluster and also provide day-2 operations for it. This is done by dedicating one Kubernetes cluster as a management cluster (MC) where all these CAPI-related controllers run. Then when a set of resources (where the main/root one is the <code>Cluster</code> CR) is created, they start to do their thing and provision the (workload) cluster (WC).</p>
+<p>Each infrastructure provider is different and provides a different level of comfort. For instance, the <code>vSphere</code> can create machines with given IPs or use DHCP. However, their <code>CPI</code> (cloud provider interface) component doesn&rsquo;t support the load balancer for services so we need to use something else.</p>
+<p>Also when creating a new cluster, at least the IP for the control plane needs to be known in advance (<code>CAPV</code>). The reason for this is that <code>CAPV</code> uses <code>kube-vip</code> by default to enable the control planes to run in HA (high availability) mode. Kubevip then selects one of the control planes as the primary one and creates a virtual IP for it. The failover is then solved by leader election mechanism by using Kubernetes <a href=https://kubernetes.io/docs/reference/kubernetes-api/cluster-resources/lease-v1/>primitives</a>. When we create a new WC, we need a new free IP for it.</p>
+<div class="notices note"><p>That&rsquo;s the problem that can be solved by IP address management (IPAM).</p>
+</div>
+<div style=padding-top:20px></div>
+<h3 id=architecture>Architecture</h3>
+<p>For better visualization of the problem, check the following diagram of our overall platform. The important part is the dedicated management cluster (MC) and CAPI controllers (the turtles) that can talk to vSphere and can create 1 to n Workload clusters (WCs), the rest is off-topic.</p>
+<p><figure><img src=/ipam-for-capv/platform-t.png>
+</figure>
+<div style=padding-top:100px></div>
+</p>
+<h2 id=part-1---service-load-balancer>Part 1 - Service Load Balancer</h2>
+<p>As we mentioned before, we don&rsquo;t have the full support from the cloud provider here so if we create a service with type <code>LoadBalancer</code>, it will stay in the pending state forever. Luckily, there are multiple solutions out there.</p>
+<p>We have considered using <code>MetalLB</code> and <code>Cilium</code> but both of them required configuring <code>BGP</code> properly (ASN numbers, etc.) so for the sake of simplicity we choose to use a simple <a href=https://kube-vip.io/><code>kube-vip</code></a> project with ARP advertisement. That means that we currently deploy <code>kube-vip</code> in two different flavors:</p>
+<p>a) used for control-plane HA (static pod on each control plane node)</p>
+<p>b) used as a service LB (deployed as <code>DaemonSet</code>)</p>
+<p>Part of the LB solution is also a <code>kube-vip</code>&rsquo;s <a href=https://github.com/kube-vip/kube-vip-cloud-provider>controller controller manager</a>. This component is also specific to on-prem and its goal is to assign a new free IP from a given CIDR. It watches for all changes to a <code>Service</code> resource of type <code>LoadBalancer</code> and if the IP is not set, it assigns a new one. Then it is up to <code>kube-vip</code> LB to create a new virtual interface on the given node and advertise this new IP in the network using the layer 2 ARP protocol.</p>
+<p>The range of IPs for service LB is defined as a <code>ConfigMap</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ k get cm kubevip -n kube-system -o jsonpath<span style=color:#f92672>={</span>.data<span style=color:#f92672>}</span> | jq
+<span style=color:#f92672>{</span>
+  <span style=color:#e6db74>&#34;cidr-global&#34;</span>: <span style=color:#e6db74>&#34;10.10.222.244/30&#34;</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>It also supports a per-namespace ranges, but we don&rsquo;t use it.</p>
+<p>If configured and deployed properly, it works like this:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># deploy an example app</span>
+λ helm upgrade -i frontend --set ui.message<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;I am example app&#34;</span> podinfo/podinfo --version 5.1.1
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># the --type=LoadBalancer is important here, it will create a service with this type</span>
+λ k expose service frontend-podinfo --port<span style=color:#f92672>=</span><span style=color:#ae81ff>80</span> --target-port<span style=color:#f92672>=</span><span style=color:#ae81ff>9898</span> --type<span style=color:#f92672>=</span>LoadBalancer --name podinfo-external
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ k get svc podinfo-external
+podinfo-external   LoadBalancer   172.31.119.240   &lt;pending&gt;     80:32062/TCP        1s
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ k get svc podinfo-external
+podinfo-external   LoadBalancer   172.31.119.240   10.10.222.244   80:32062/TCP        5s
+
+λ curl -s 10.10.222.244 | grep message
+  <span style=color:#e6db74>&#34;message&#34;</span>: <span style=color:#e6db74>&#34;I am example app&#34;</span>,
+</code></pre></div><p><code>\o/</code>
+<div style=padding-top:100px></div>
+</p>
+<h2 id=part-2---ipam-for-workload-clusters-api-server>Part 2 - IPAM for Workload Clusters (api server)</h2>
+<p>This is an orthogonal problem to the previous one, but it also includes IPAM. When creating a new cluster using Cluster API, one has to create a whole bunch of Kubernetes resources. There are tutorials, docs and presentations about CAPI, so we are not going to describe it in detail, but rather from a high perspective. These resources form a tree and are cross-linked by references in their <code>.spec</code>s. CAPI consist of four controllers and each of them reacts on various CRs from that tree of yamls. Luckily the overall reconciliation of a new cluster can be paused by setting such a flag on the top-lvl CR - Cluster. We will use that later on.</p>
+<p>What we are going to need is a controller/operator that keeps track of used IP addresses and can allocate new ones, ideally in Kubernetes native way. CAPI itself
+introduces the following CRDs:</p>
+<ul>
+<li><code>IPAddress</code></li>
+<li><code>IPAddressClaim</code></li>
+</ul>
+<p>And the idea is that one can create an <code>IPAddressClaim</code> CR with a reference to a &ldquo;pool&rdquo; and someone should create a new <code>IPAddress</code> with the same name as the claim satisfying the IP address range definition from the pool. One implementor of this contract is the <a href=https://github.com/kubernetes-sigs/cluster-api-ipam-provider-in-cluster>cluster-api-ipam-provider-in-cluster</a> that we ended up using.</p>
+<p>Example:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ k get globalinclusterippools.ipam.cluster.x-k8s.io
+NAME        ADDRESSES                         TOTAL   FREE   USED
+wc-cp-ips   <span style=color:#f92672>[</span><span style=color:#e6db74>&#34;10.10.222.232-10.10.222.238&#34;</span><span style=color:#f92672>]</span>   <span style=color:#ae81ff>7</span>       <span style=color:#ae81ff>6</span>      <span style=color:#ae81ff>1</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#ae81ff>λ cat &lt;&lt;IP | kubectl apply -f -</span>
+<span style=color:#f92672>apiVersion</span>: <span style=color:#ae81ff>ipam.cluster.x-k8s.io/v1alpha1</span>
+<span style=color:#f92672>kind</span>: <span style=color:#ae81ff>IPAddressClaim</span>
+<span style=color:#f92672>metadata</span>:
+  <span style=color:#f92672>name</span>: <span style=color:#ae81ff>give-me-an-ip</span>
+<span style=color:#f92672>spec</span>:
+  <span style=color:#f92672>poolRef</span>:
+    <span style=color:#f92672>apiGroup</span>: <span style=color:#ae81ff>ipam.cluster.x-k8s.io</span>
+    <span style=color:#f92672>kind</span>: <span style=color:#ae81ff>GlobalInClusterIPPool</span>
+    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>wc-cp-ips</span>
+<span style=color:#ae81ff>IP</span>
+<span style=color:#ae81ff>ipaddressclaim.ipam.cluster.x-k8s.io/give-me-an-ip created</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ k get ipaddress give-me-an-ip
+NAME            ADDRESS         POOL NAME   POOL KIND
+give-me-an-ip   10.10.222.233   wc-cp-ips   GlobalInClusterIPPool
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ k get globalinclusterippools.ipam.cluster.x-k8s.io
+NAME        ADDRESSES                         TOTAL   FREE   USED
+wc-cp-ips   <span style=color:#f92672>[</span><span style=color:#e6db74>&#34;10.10.222.232-10.10.222.238&#34;</span><span style=color:#f92672>]</span>   <span style=color:#ae81ff>7</span>       <span style=color:#ae81ff>5</span>      <span style=color:#ae81ff>2</span>
+</code></pre></div><p><code>CAPV</code> itself has support for <code>IPAM</code> already included, but this is limited to creating the VMs and assigning them IPs.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>k explain vspheremachine.spec.network.devices.addressesFromPools
+...
+DESCRIPTION:
+    AddressesFromPools is a list of IPAddressPools that should be assigned to
+    IPAddressClaims. The machine<span style=color:#960050;background-color:#1e0010>&#39;</span>s cloud-init metadata will be populated with
+    IPAddresses fulfilled by an IPAM provider.
+    TypedLocalObjectReference contains enough information to let you locate the
+    typed referenced object inside the same namespace.
+</code></pre></div><p>It means that each VM created from a given template will have an IP address managed using the <code>IPAddress</code> and <code>IPAddressClaim</code>. That&rsquo;s both overkill and also not sufficient. It&rsquo;s overkill because we don&rsquo;t need to take those non-important VMs (like worker nodes, or other control planes (CP) when running in HA) those precious IPs, we care only about one virtual API for all control planes running in HA mode as described in <code>kube-vip</code> (control plane HA use-case).</p>
+<p>At the same time, it is not sufficient, because it can&rsquo;t propagate that IP into other resources in that tree of CAPI objects where the information is needed:
+<div class="notices foobar" id=propagate><ul>
+<li><code>.spec.controlPlaneEndpoint.host</code> in <code>VsphereCluster</code> CR</li>
+<li>static pod definition for Kubevip in <code>KubeadmControlPlane</code> (file with static pod is mounted to each CP node)</li>
+<li><code>.spec.kubeadmConfigSpec.clusterConfiguration.apiServer.certSANs</code> same <code>KubeadmControlPlane</code> CR as the previous one</li>
+</ul>
+</div>
+</p>
+<div style=padding-top:50px></div>
+<h3 id=our-solution>Our Solution</h3>
+<p>So given we have installed the <code>cluster-api-ipam-provider-in-cluster</code> (<code>CAIP</code> - not to be confused with <code>CAPI</code> ;) we can now first create the <code>IPAddressClaim</code>, and only if it succeeds, only then use that IP in those places described <a href=./#propagate>above</a> and create the set of resources for CAPI.</p>
+<p>However, our resources for <code>VsphereCluster</code> are delivered as a Helm Chart so we can actually:</p>
+<ol>
+<li>deploy everything at once, all the CAPI resources, but also the <code>IPAddressClaim</code></li>
+<li>create a pre-install job that will pause the <code>Cluster</code> CR so that controllers will ignore it for a moment</li>
+<li>create a post-install job in helm that will be waiting for the <code>IPAddress</code> to exist</li>
+<li>once the IP is obtained, it will propagate (<code>kubectl patch</code>) the IP to those three <a href=./#propagate>abovementioned</a> places</li>
+<li>unpause the <code>Cluster</code> CR</li>
+</ol>
+<hr>
+<p>code: <a href=https://github.com/giantswarm/cluster-vsphere/blob/main/helm/cluster-vsphere/templates/ipam/assign-ip-pre-install-job.yaml><code>assign-ip-pre-install-job.yaml</code></a></p>
+<hr>
+<p>All this jazz is happening in our implementation only if the cluster is created w/o any IP address in the <code>.spec.controlPlaneEndpoint.host</code> field. If the IP is specified, it will use the given/static one. The advantage of this approach is that <code>IPAddressClaim</code> is also part of the helm chart so if the helm chart got uninstalled, the claim is also deleted and the IP can be reused later on by another WC. Nice side-effect of this approach is that all the IPAM can be easily managed at one place in the MC using the CRDs.</p>
+<p><code>\o/</code>
+<div style=padding-top:100px></div>
+</p>
+<h2 id=part-3---kyverno-policy>Part 3 - Kyverno Policy</h2>
+<p>Another approach to IPAM for WCs problem would be using Kyverno and its ability to create validating and mutating webhooks much more easily. Originally,
+I wanted to introduce a mutating webhook that would intercept the creation of the Cluster resrource without any IP in it and assign this IP here.</p>
+<p>The problem with this approach is that Kyverno&rsquo;s internal language (JMESPath) is not powerful enough for this. It can&rsquo;t expand CIDR ranges or keep track of how many IPs were taken, fill the holes, etc.</p>
+<p>On the other hand, the validating webhook would be perfectly doable here with little help of helm-chart-fu again.</p>
+<hr>
+<p>Kyverno can check for instance if certain field of a validated resource is contained in the set. So if we pre-populate the set with allowed values, the check itself is pretty easy:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>      <span style=color:#ae81ff>...</span>
+      <span style=color:#f92672>validate</span>:
+        <span style=color:#f92672>deny</span>:
+          <span style=color:#f92672>conditions</span>:
+            <span style=color:#f92672>all</span>:
+            - <span style=color:#f92672>key</span>: {{<span style=color:#ae81ff>`&#34;{{ request.object.spec.controlPlaneEndpoint.host }}&#34;`}}</span>
+              <span style=color:#f92672>operator</span>: <span style=color:#ae81ff>NotIn</span>
+              <span style=color:#f92672>value</span>: {{<span style=color:#ae81ff>`&#34;{{ allowedIps }}&#34;`}}</span>
+      <span style=color:#ae81ff>...</span>
+</code></pre></div><p><code>allowedIps</code> here are read from the ConfigMap:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>      <span style=color:#ae81ff>...</span>
+      <span style=color:#f92672>context</span>:
+        - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>wcAllowedIpsCm</span>
+          <span style=color:#f92672>configMap</span>:
+            <span style=color:#f92672>name</span>: {{ <span style=color:#ae81ff>.Release.Name }}-wc-allowed-ips</span>
+            <span style=color:#f92672>namespace</span>: <span style=color:#e6db74>&#34;{{ $.Release.Namespace }}&#34;</span>
+        - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>allowedIps</span>
+          <span style=color:#f92672>variable</span>:
+            <span style=color:#f92672>value</span>: {{<span style=color:#ae81ff>`&#34;{{ wcAllowedIpsCm.data.\&#34;allowed-ips\&#34; | parse_yaml(@) }}&#34;`}}</span>
+      <span style=color:#ae81ff>...</span>
+</code></pre></div><p><a href=https://github.com/giantswarm/kyverno-policies-connectivity/blob/main/helm/kyverno-policies-connectivity/templates/wc-ip/WorkloadClusterIp.yaml>full code</a></p>
+<p>And finally, this configmap is pre-populated by a pre-install helm job with a little bit of good ol' bash in it: <a href=https://github.com/giantswarm/kyverno-policies-connectivity/blob/main/helm/kyverno-policies-connectivity/templates/wc-ip/WorkloadClusterIpJob.yaml>full code</a>.</p>
+<p>So if this Kyverno <code>ClusterPolicy</code> is active, it doesn&rsquo;t allow anybody to create or change the <code>.spec.controlPlaneEndpoint.host</code> field of <code>VsphereCluster</code> (but it can work with any Infra cluster CR) to an IP that&rsquo;s not coming from a given IP range.</p>
+<p>In theory, Kyverno could also use the CAIP controller and introduce a <a href=https://kyverno.io/docs/writing-policies/generate/>Generate rule</a> that would be creating those <code>IpAddressClaims</code> but that sounds like a lot of magic to me and those claims would stay there even if the cluster was uninstalled (the IP would not be freed).</p>
+<div style=padding-top:50px></div>
+<h1 id=conclusion>Conclusion</h1>
+<p>In on-prem (or even bare metal) environments we are often on our own with CAPI and in this blog post, we have described our way to do-it-yourself IPAM solution. It provides a way to simply check available addresses using the kubectl. <code>kube-vip</code> is a very well-described open-source project and do its job as promised. We use it for
+two different use cases (LB for services and HA for CPs).</p>
+<p>And last but not least, Kyverno can guard what IPs are actually used in the Cluster resource and intercept disaster scenarios where one can assign an existing IP to a cluster. It will happilly provision the VMs, but then the api-server will be failing half of the requests because there are two VMs with the same static IP.</p>
+<hr>
+<p>
+<div style=padding-top:100px></div>
+I think the following two images conclude nicely the IPAM in CAPI.</p>
+<h3 id=what-users-want-to-happen>What users want to happen:</h3>
+<figure><img src=/ipam-for-capv/cluster.png>
+</figure>
+<hr>
+<h3 id=what-actually-happens>What actually happens:</h3>
+<figure><img src=/ipam-for-capv/complex.png>
+</figure>
+<hr>
+<p>Where <code>devex fairy</code> is the CAIP & CAPI controllers and <code>security gandalf</code> is Kyverno.
+<div style=padding-top:400px></div>
+</p>
+<h2 id=sources--links>Sources & Links</h2>
+<ul>
+<li>[1]
+<i class="fa fa-github"></i>
+Repo with the <code>VsphereCluster</code> helm chart &ndash; <a href=https://github.com/giantswarm/cluster-vsphere>giantswarm/cluster-vsphere</a></li>
+<li>[2]
+<i class="fa fa-github"></i>
+Repo with the IPAM controller &ndash; <a href=https://github.com/kubernetes-sigs/cluster-api-ipam-provider-in-cluster>kubernetes-sigs/cluster-api-ipam-provider-in-cluster</a></li>
+<li>[3]
+<i class="fa fa-github"></i>
+Repo with the helm chart for IPAM controller (can also install the pool) &ndash; <a href=https://github.com/giantswarm/cluster-api-ipam-provider-in-cluster-app>giantswarm/cluster-api-ipam-provider-in-cluster-app</a></li>
+<li>[4]
+<i class="fa fa-github"></i>
+Repo with the Kyverno policy &ndash; <a href=https://github.com/giantswarm/kyverno-policies-connectivity>giantswarm/kyverno-policies-connectivity</a></li>
+<li>[5]
+<i class="fa fa-globe"></i>
+kubevip project &ndash; <a href=https://kube-vip.io>kube-vip.io</a></li>
+<li>[6]
+<i class="fa fa-github"></i>
+Repo with the <code>CAPV</code> controller &ndash; <a href=https://github.com/kubernetes-sigs/cluster-api-provider-vsphere>kubernetes-sigs/cluster-api-provider-vsphere</a></li>
+<li>[7]
+<i class="fa fa-github"></i>
+Repo with the <code>CAPI</code> controller &ndash; <a href=https://github.com/kubernetes-sigs/cluster-api>kubernetes-sigs/cluster-api</a></li>
+</ul>
+</div>
+<h4 class=page-header>Related</h4>
+<div class=item>
+<h4><a href=/post/web-app-kubernetes/>Prototyping a web app that can talk to Kubernetes API</a></h4>
+<h5>June 29, 2020</h5>
+<a href=https://jkremser.github.io/tags/kubernetes><kbd class=item-tag>kubernetes</kbd></a>
+<a href=https://jkremser.github.io/tags/development><kbd class=item-tag>development</kbd></a>
+<a href=https://jkremser.github.io/tags/frontend><kbd class=item-tag>frontend</kbd></a>
+<a href=https://jkremser.github.io/tags/api><kbd class=item-tag>API</kbd></a>
+<a href=https://jkremser.github.io/tags/javascript><kbd class=item-tag>JavaScript</kbd></a>
+<a href=https://jkremser.github.io/tags/express.js><kbd class=item-tag>express.js</kbd></a>
+</div>
+<h4 class=page-header>Comments</h4>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){this.page.identifier='ipam-capi-k8s',this.page.title='IP Address Management for Cluster API \u0026 on-prem'};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//jkremser.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</main>
+<footer>
+<p class="copyright text-muted">(ɔ) Copyleft: All rights not-reserved, here is the <a href=https://github.com/jkremser/web>code</a></p>
+</footer>
+</body>
+</html>
