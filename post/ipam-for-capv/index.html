@@ -215,6 +215,8 @@ I wanted to introduce a mutating webhook that would intercept the creation of th
 <p>In on-prem (or even bare metal) environments we are often on our own with CAPI and in this blog post, we have described our way to do-it-yourself IPAM solution. It provides a way to simply check available addresses using the kubectl. <code>kube-vip</code> is a very well-described open-source project and do its job as promised. We use it for
 two different use cases (LB for services and HA for CPs).</p>
 <p>And last but not least, Kyverno can guard what IPs are actually used in the Cluster resource and intercept disaster scenarios where one can assign an existing IP to a cluster. It will happilly provision the VMs, but then the api-server will be failing half of the requests because there are two VMs with the same static IP.</p>
+<h3 id=implications>Implications</h3>
+<p>With this DIY solution, customer (platform developer) does not have to pay for more advanced solutions like <code>NSX Advanced Load Balancer</code> in case of <code>vSphere</code> ecosystem and at the same time, has the full control over the infrastructure. Nonetheless, with great power comes great responsibility 🕷</p>
 <hr>
 <p>
 <div style=padding-top:100px></div>
